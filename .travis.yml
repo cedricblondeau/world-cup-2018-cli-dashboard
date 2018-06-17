@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - 8
+
+dist: trusty
+
+before_install:
+  - sudo apt-get -qq update
+
+sudo: false
+
+script:
+  - yarn lint
+
+notifications:
+  email: false
