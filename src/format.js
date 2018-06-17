@@ -1,21 +1,30 @@
 import { flag } from 'country-emoji';
 
-function getFormattedCountry(country) {
-  const countryFlag = flag(country);
-  if (!countryFlag) {
-    return country;
+function getCountryFlagEmoji(countryName) {
+  const countryCodes = new Map([
+    ['Korea Republic', 'KR'],
+    ['England', 'GB'], // Emoji 5?
+  ]);
+
+  let flagEmoji;
+  if (countryCodes.has(countryName)) {
+    flagEmoji = flag(countryCodes.get(countryName));
+  } else {
+    flagEmoji = flag(countryName);
+  }
+  if (!flagEmoji) {
+    return '🤷';
   }
 
-  return `${countryFlag}  ${country}`;
+  return flagEmoji;
 }
 
-function getFormattedShortCountryName(country, fifaCode) {
-  const countryFlag = flag(country);
-  if (!countryFlag) {
-    return `🤷  ${fifaCode}`;
-  }
+function getFormattedCountry(countryName) {
+  return `${getCountryFlagEmoji(countryName)} ${countryName}`;
+}
 
-  return `${countryFlag}  ${fifaCode}`;
+function getFormattedShortCountryName(countryName, fifaCode) {
+  return `${getCountryFlagEmoji(countryName)} ${fifaCode}`;
 }
 
 function getFormattedNonCompletedMatch(match) {
