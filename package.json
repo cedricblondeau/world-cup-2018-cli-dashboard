@@ -1,0 +1,9 @@
+{
+  "name": "world-cup-2018-cli-dashboard",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": "https://github.com/cedricblondeau/world-cup-2018-cli-dashboard",
+  "author": "Cédric Blondeau",
+  "license": "GLWTPL",
+  "private": false
+}
