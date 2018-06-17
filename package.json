@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "start": "babel-node ./src/index.jsx",
-    "lint": "eslint ./src"
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -29,6 +29,7 @@
     "axios": "^0.18.0",
     "blessed": "^0.1.81",
     "country-emoji": "^1.2.0",
+    "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-blessed": "^0.2.1"
   }
