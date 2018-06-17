@@ -24,5 +24,10 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "prettier": "^1.13.5"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "react": "^16.4.1",
+    "react-blessed": "^0.2.1"
   }
 }
