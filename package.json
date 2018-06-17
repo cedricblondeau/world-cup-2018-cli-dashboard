@@ -1,21 +1,28 @@
 {
   "name": "world-cup-2018-cli-dashboard",
   "version": "0.0.1",
-  "main": "src/index.jsx",
+  "main": "dist/index.js",
+  "module": "src/index.jsx",
+  "bin": {
+    "wc2018": "bin/wc2018"
+  },
   "repository": "https://github.com/cedricblondeau/world-cup-2018-cli-dashboard",
   "author": "Cédric Blondeau",
   "license": "GLWTPL",
   "private": false,
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "start": "babel-node ./src/index.jsx",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "prepublish": "yarn build",
+    "build": "babel src --out-dir dist"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
