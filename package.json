@@ -1,5 +1,5 @@
 {
-  "name": "world-cup-2018-cli-dashboard",
+  "name": "world-cup-cli-dashboard",
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "src/index.jsx",

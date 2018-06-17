@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-yarn global add world-cup-2018-cli-dashboard
+yarn global add world-cup-cli-dashboard
 ```
 
 Requires NodeJS 6+.
