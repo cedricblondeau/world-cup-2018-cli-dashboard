@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Dashboard = () => <element />;
+import TodayMatches from './components/today';
+
+const Dashboard = () => (
+  <element>
+    <TodayMatches />
+  </element>
+);
 
 export default Dashboard;

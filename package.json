@@ -26,6 +26,7 @@
     "prettier": "^1.13.5"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "blessed": "^0.1.81",
     "country-emoji": "^1.2.0",
     "react": "^16.4.1",
