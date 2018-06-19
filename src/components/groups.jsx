@@ -1,18 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Group from './group';
-
-const getGroups = async () => {
-  try {
-    const response = await axios.get(
-      'http://worldcup.sfg.io/teams/group_results',
-    );
-    return response.data;
-  } catch (e) {
-    return null;
-  }
-};
 
 class Groups extends Component {
   constructor(props) {
@@ -43,8 +33,14 @@ class Groups extends Component {
   }
 
   async updateGroups() {
-    const groups = await getGroups();
-    this.setState({ groups });
+    try {
+      const response = await axios.get(
+        'http://worldcup.sfg.io/teams/group_results',
+      );
+      this.setState({ groups: response.data });
+    } catch (e) {
+      this.props.debug(`Groups - ${e.message}`);
+    }
   }
 
   render() {
@@ -57,5 +53,9 @@ class Groups extends Component {
     );
   }
 }
+
+Groups.propTypes = {
+  debug: PropTypes.func.isRequired,
+};
 
 export default Groups;

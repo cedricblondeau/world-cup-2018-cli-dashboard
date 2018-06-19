@@ -13,4 +13,4 @@ const screen = blessed.screen({
 });
 screen.key(['escape', 'q', 'C-c'], () => process.exit(0));
 
-render(<Dashboard />, screen);
+render(<Dashboard debug={msg => screen.debug(msg)} />, screen);

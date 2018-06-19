@@ -1,28 +1,14 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { getFormattedNonCompletedMatch, getFormattedScore } from '../format';
-
-const getCurrentMatch = async () => {
-  let matches;
-  try {
-    matches = await axios.get('http://worldcup.sfg.io/matches/current');
-  } catch (e) {
-    return null;
-  }
-
-  if (!matches.data[0]) {
-    return null;
-  }
-
-  return matches.data[0];
-};
 
 class CurrentMatch extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { currentMatch: null, isLoading: true };
+    this.state = { currentMatches: null, isLoading: true };
 
     this.updateCurrentMatch();
     setInterval(() => this.updateCurrentMatch(), 30 * 1000);
@@ -33,13 +19,12 @@ class CurrentMatch extends Component {
       return 'Fetching...';
     }
 
-    if (!this.state.currentMatch) {
+    if (this.state.currentMatches.length === 0) {
       return 'There are currently no matches';
     }
 
-    return `Current match: ${getFormattedNonCompletedMatch(
-      this.state.currentMatch,
-    )}`;
+    const firstMatch = this.state.currentMatches[0];
+    return `Current match: ${getFormattedNonCompletedMatch(firstMatch)}`;
   }
 
   get currentMatchScore() {
@@ -47,16 +32,30 @@ class CurrentMatch extends Component {
       return 'Fetching...';
     }
 
-    if (!this.state.currentMatch) {
+    if (this.state.currentMatches.length === 0) {
       return 'N/A';
     }
 
-    return getFormattedScore(this.state.currentMatch);
+    const firstMatch = this.state.currentMatches[0];
+    return getFormattedScore(firstMatch);
   }
 
   async updateCurrentMatch() {
-    const currentMatch = await getCurrentMatch();
-    this.setState({ currentMatch, isLoading: false });
+    try {
+      const response = await axios.get(
+        'http://worldcup.sfg.io/matches/current',
+      );
+      if (!Array.isArray(response.data)) {
+        this.props.debug(
+          `CurrentMatch - Received unexpected data: ${response.data}`,
+        );
+        return;
+      }
+
+      this.setState({ currentMatches: response.data, isLoading: false });
+    } catch (e) {
+      this.props.debug(`CurrentMatch: ${e.message}`);
+    }
   }
 
   render() {
@@ -90,5 +89,9 @@ class CurrentMatch extends Component {
     );
   }
 }
+
+CurrentMatch.propTypes = {
+  debug: PropTypes.func.isRequired,
+};
 
 export default CurrentMatch;

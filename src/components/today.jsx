@@ -1,19 +1,11 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   getFormattedCompletedMatch,
   getFormattedNonCompletedMatch,
 } from '../format';
-
-const getTodayMatches = async () => {
-  try {
-    const response = await axios.get('http://worldcup.sfg.io/matches/today');
-    return response.data;
-  } catch (e) {
-    return null;
-  }
-};
 
 class TodayMatches extends Component {
   constructor(props) {
@@ -56,8 +48,19 @@ class TodayMatches extends Component {
   }
 
   async updateTodayMatches() {
-    const matches = await getTodayMatches();
-    this.setState({ matches, isLoading: false });
+    try {
+      const response = await axios.get('http://worldcup.sfg.io/matches/today');
+      if (!Array.isArray(response.data)) {
+        this.props.debug(
+          `TodayMatches - Received unexpected data: ${response.data}`,
+        );
+        return;
+      }
+
+      this.setState({ matches: response.data, isLoading: false });
+    } catch (e) {
+      this.props.debug(`TodayMatches - ${e.message}`);
+    }
   }
 
   render() {
@@ -75,5 +78,9 @@ class TodayMatches extends Component {
     );
   }
 }
+
+TodayMatches.propTypes = {
+  debug: PropTypes.func.isRequired,
+};
 
 export default TodayMatches;
