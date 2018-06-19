@@ -24,6 +24,8 @@ Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/).
 
 Today matches get updated each 2 minutes. Current game score gets updated each 30 seconds.
 
+Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
+
 ## LICENSE
 
 MIT
