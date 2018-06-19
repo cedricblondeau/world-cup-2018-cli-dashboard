@@ -10,6 +10,12 @@
 yarn global add world-cup-cli-dashboard
 ```
 
+Or using `npm`:
+
+```bash
+npm install -g world-cup-cli-dashboard
+```
+
 Requires NodeJS 6+.
 
 ## Usage
