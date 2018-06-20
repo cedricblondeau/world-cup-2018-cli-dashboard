@@ -7,7 +7,7 @@ const getTableDataForGroup = group => {
   const data = group.teams.reduce((rankings, team) => {
     rankings.push([
       getFormattedShortCountryName(team.team.country, team.team.fifa_code),
-      team.team.points,
+      team.team.points.toString(),
     ]);
     return rankings;
   }, []);
