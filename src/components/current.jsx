@@ -13,7 +13,7 @@ class CurrentMatch extends Component {
 
   componentDidMount() {
     this.updateCurrentMatch();
-    setInterval(() => this.updateCurrentMatch(), 30 * 1000);
+    setInterval(() => this.updateCurrentMatch(), 60 * 1000);
   }
 
   get currentMatchLabel() {

@@ -28,7 +28,7 @@ wc2018
 
 Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/).
 
-Today matches get updated each 2 minutes. Current game score gets updated each 30 seconds.
+Today matches get updated each 5 minutes. Current game score gets updated each 60 seconds.
 
 Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
 

@@ -16,7 +16,7 @@ class TodayMatches extends Component {
 
   componentDidMount() {
     this.updateTodayMatches();
-    setInterval(() => this.updateTodayMatches(), 120 * 1000);
+    setInterval(() => this.updateTodayMatches(), 5 * 60 * 1000);
   }
 
   get todayMatchesContent() {
