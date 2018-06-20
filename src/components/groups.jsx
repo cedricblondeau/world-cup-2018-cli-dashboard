@@ -9,6 +9,9 @@ class Groups extends Component {
     super(props);
 
     this.state = { groups: null };
+  }
+
+  componentDidMount() {
     this.updateGroups();
   }
 

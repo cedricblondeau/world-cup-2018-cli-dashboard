@@ -12,7 +12,9 @@ class TodayMatches extends Component {
     super(props);
 
     this.state = { matches: [], isLoading: true };
+  }
 
+  componentDidMount() {
     this.updateTodayMatches();
     setInterval(() => this.updateTodayMatches(), 120 * 1000);
   }

@@ -9,7 +9,9 @@ class CurrentMatch extends Component {
     super(props);
 
     this.state = { currentMatches: null, isLoading: true };
+  }
 
+  componentDidMount() {
     this.updateCurrentMatch();
     setInterval(() => this.updateCurrentMatch(), 30 * 1000);
   }
