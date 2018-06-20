@@ -40,6 +40,11 @@ class Groups extends Component {
       const response = await axios.get(
         'http://worldcup.sfg.io/teams/group_results',
       );
+      if (!Array.isArray(response.data)) {
+        this.props.debug(`Groups - Received unexpected data: ${response.data}`);
+        return;
+      }
+
       this.setState({ groups: response.data });
     } catch (e) {
       this.props.debug(`Groups - ${e.message}`);
