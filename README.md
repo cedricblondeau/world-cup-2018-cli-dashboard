@@ -6,11 +6,21 @@
 
 ## Install
 
+**Using `docker` 🐳**:
+
+```bash
+docker run -ti cedricbl/world-cup-2018-cli-dashboard
+```
+
+**Using `yarn`**:
+
 ```bash
 yarn global add world-cup-cli-dashboard
 ```
 
-Or using `npm`:
+Requires NodeJS 6+.
+
+**Using `npm`**:
 
 ```bash
 npm install -g world-cup-cli-dashboard
