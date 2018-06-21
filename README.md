@@ -9,8 +9,10 @@
 **Using `docker` 🐳**:
 
 ```bash
-docker run -ti cedricbl/world-cup-2018-cli-dashboard
+docker run -ti -e TZ=America/Toronto cedricbl/world-cup-2018-cli-dashboard
 ```
+
+Replace `America/Toronto` with you actual timezone.
 
 **Using `yarn`**:
 
@@ -41,6 +43,17 @@ Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/).
 Today matches get updated each 5 minutes. Current game score gets updated each 60 seconds.
 
 Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
+
+## Development
+
+```bash
+git clone https://github.com/cedricblondeau/world-cup-2018-cli-dashboard
+cd world-cup-2018-cli-dashboard
+yarn install
+yarn start
+```
+
+Contributions are very welcome.
 
 ## LICENSE
 
