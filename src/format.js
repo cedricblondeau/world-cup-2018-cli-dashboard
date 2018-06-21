@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import { flag } from 'country-emoji';
 
 function getCountryFlagEmoji(countryName) {
@@ -39,8 +41,21 @@ function getFormattedCompletedMatch(match) {
   } - ${match.away_team.goals} ${getFormattedCountry(match.away_team.country)}`;
 }
 
+function getFormattedMatch(match) {
+  if (match.status === 'completed') {
+    return getFormattedCompletedMatch(match);
+  }
+  return getFormattedNonCompletedMatch(match);
+}
+
 function getFormattedScore(match) {
   return `${match.home_team.goals}-${match.away_team.goals}`;
+}
+
+function getFormattedDatetime(match) {
+  return moment(match.datetime)
+    .local()
+    .format('L LT');
 }
 
 export {
@@ -49,4 +64,6 @@ export {
   getFormattedCompletedMatch,
   getFormattedScore,
   getFormattedShortCountryName,
+  getFormattedDatetime,
+  getFormattedMatch,
 };
