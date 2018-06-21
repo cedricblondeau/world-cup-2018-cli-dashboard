@@ -11,7 +11,7 @@ function getMatches(matches) {
 }
 
 const MatchesTable = props => (
-  <element
+  <box
     left={0}
     top={props.top}
     width="100%"
@@ -29,11 +29,11 @@ const MatchesTable = props => (
       top={2}
       left="center"
       data={getMatches(props.matches)}
-      width="90%"
-      height={8}
+      width="100%-4"
+      height="100%-4"
       align="left"
     />
-  </element>
+  </box>
 );
 
 MatchesTable.propTypes = {
