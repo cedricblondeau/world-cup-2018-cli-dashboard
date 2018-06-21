@@ -34,7 +34,7 @@ const Group = props => (
 Group.propTypes = {
   top: PropTypes.string.isRequired,
   left: PropTypes.string.isRequired,
-  group: PropTypes.array.isRequired,
+  group: PropTypes.object.isRequired,
 };
 
 export default Group;
