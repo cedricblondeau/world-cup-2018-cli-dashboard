@@ -34,17 +34,7 @@ const Group = props => (
 Group.propTypes = {
   top: PropTypes.string.isRequired,
   left: PropTypes.string.isRequired,
-  group: PropTypes.shape({
-    letter: PropTypes.string,
-    teams: PropTypes.arrayOf(
-      PropTypes.shape({
-        team: PropTypes.shape({
-          country: PropTypes.string,
-          fifa_code: PropTypes.string,
-        }),
-      }),
-    ),
-  }).isRequired,
+  group: PropTypes.object.isRequired,
 };
 
 export default Group;

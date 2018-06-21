@@ -62,7 +62,7 @@ class CurrentMatch extends Component {
 
   render() {
     return (
-      <box width="50%" height="50%" border={{ type: 'line' }}>
+      <box width="55%" height="50%" border={{ type: 'line' }}>
         <box
           content={this.currentMatchLabel}
           tags
