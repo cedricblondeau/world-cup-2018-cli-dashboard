@@ -53,7 +53,7 @@ class Groups extends Component {
 
   render() {
     return (
-      <element width="50%" height="100%" top="0" left="50%" border="line">
+      <element width="45%" height="100%" top="0" left="55%" border="line">
         <element left={4} top={1}>
           {this.groups}
         </element>
