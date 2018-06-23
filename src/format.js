@@ -109,9 +109,6 @@ function getFormattedMatchEventRight(event) {
 
 export {
   getFormattedCountry,
-  getFormattedNonCompletedMatch,
-  getFormattedCompletedMatch,
-  getFormattedScore,
   getFormattedShortCountryName,
   getFormattedDatetime,
   getFormattedMatch,
