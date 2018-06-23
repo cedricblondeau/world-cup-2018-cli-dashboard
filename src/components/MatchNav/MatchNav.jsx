@@ -11,7 +11,12 @@ const getLastMatches = matches =>
 
 const getMatchNavItems = matches =>
   matches.map((match, i) => (
-    <MatchNavItem left={i * 23} width={23} match={match} />
+    <MatchNavItem
+      key={`match-nav-item-{${match.fifa_id}}`}
+      left={i * 23}
+      width={23}
+      match={match}
+    />
   ));
 
 const MatchNav = props => (
