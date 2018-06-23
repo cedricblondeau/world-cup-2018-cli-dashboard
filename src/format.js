@@ -79,6 +79,7 @@ function getFormattedDatetime(match) {
 function getEventTypeEmoji(eventType) {
   const eventEmojis = new Map([
     ['yellow-card', emoji.get('warning')],
+    ['yellow-card-second', emoji.get('warning')],
     ['red-card', emoji.get('red_circle')],
     ['goal', emoji.get('soccer')],
     ['substitution-in', emoji.get('arrow_forward')],
