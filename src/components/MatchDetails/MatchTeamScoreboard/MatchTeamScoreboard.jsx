@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { getFormattedCountry } from '../format';
-import MatchEvents from './matchevents';
+import { getFormattedCountry } from '../../../format';
+import MatchEvents from '../MatchEvents/MatchEvents';
 
 class MatchTeamScoreboard extends Component {
   get goalsLeftPosition() {

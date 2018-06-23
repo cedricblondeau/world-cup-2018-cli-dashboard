@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getFormattedDatetime } from '../format';
-import MatchTeamScoreboard from './matchteamscoreboard';
+import { getFormattedDatetime } from '../../format';
+import MatchTeamScoreboard from './MatchTeamScoreboard/MatchTeamScoreboard';
 
 const MatchDetails = props => (
   <element>
