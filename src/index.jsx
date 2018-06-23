@@ -2,7 +2,7 @@ import React from 'react';
 import blessed from 'blessed';
 import { render } from 'react-blessed';
 
-import Dashboard from './dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const screen = blessed.screen({
   autoPadding: true,

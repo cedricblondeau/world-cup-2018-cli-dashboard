@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { getFormattedCountry } from '../format';
-import MatchEvents from './matchevents';
+import { getFormattedCountry } from '../../../format';
+import MatchEvents from '../MatchEvents/MatchEvents';
 
 class MatchTeamScoreboard extends Component {
   get goalsLeftPosition() {
@@ -16,7 +16,7 @@ class MatchTeamScoreboard extends Component {
   render() {
     return (
       <element>
-        <box height={17}>
+        <box height={14}>
           <box
             content={getFormattedCountry(this.props.country)}
             height={1}
@@ -36,7 +36,7 @@ class MatchTeamScoreboard extends Component {
             left={this.goalsLeftPosition}
           />
         </box>
-        <box top={17} height="100%-18">
+        <box top={14} height="100%-15">
           <MatchEvents events={this.props.events} align={this.props.align} />
         </box>
       </element>
