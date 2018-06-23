@@ -15,29 +15,37 @@ const getAPIWrapper = () => {
   return ProdAPI;
 };
 
+const getNextMatches = matches =>
+  matches.filter(match => match.status === 'future');
+
+const getCurrentAndLastMatches = matches =>
+  matches
+    .filter(
+      match => match.status === 'completed' || match.status === 'in progress',
+    )
+    .reverse();
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-    this.state = { groups: null, matches: null };
+    this.state = {
+      selectedNonCompleteMatchIndex: 0,
+      groups: null,
+      matches: null,
+    };
   }
 
   componentDidMount() {
     this.updateGroups();
     this.updateMatches();
     setInterval(() => this.updateMatches(), 1 * 30 * 1000);
+    this.addKeyPressListeners();
   }
 
-  get currentOrLastMatch() {
-    const currentMatch = this.state.matches.find(
-      match => match.status === 'in progress',
-    );
-    if (currentMatch) {
-      return currentMatch;
-    }
-
-    return this.state.matches
-      .filter(match => match.status === 'completed')
-      .reverse()[0];
+  get matchToDisplay() {
+    return getCurrentAndLastMatches(this.state.matches)[
+      this.state.selectedNonCompleteMatchIndex
+    ];
   }
 
   get matchDetails() {
@@ -45,12 +53,12 @@ class Dashboard extends Component {
       return <box content="Fetching data..." />;
     }
 
-    const { currentOrLastMatch } = this;
-    if (!currentOrLastMatch) {
+    const { matchToDisplay } = this;
+    if (!matchToDisplay) {
       return <box content="No match?" />;
     }
 
-    return <MatchDetails match={this.currentOrLastMatch} />;
+    return <MatchDetails match={matchToDisplay} />;
   }
 
   get groups() {
@@ -65,7 +73,41 @@ class Dashboard extends Component {
       return <box content="Fetching data..." />;
     }
 
-    return <MatchNav matches={this.state.matches} />;
+    return (
+      <MatchNav
+        currentAndLastMatches={getCurrentAndLastMatches(this.state.matches)}
+        selectedNonCompletedMatchIndex={
+          this.state.selectedNonCompleteMatchIndex
+        }
+        nextMatches={getNextMatches(this.state.matches)}
+      />
+    );
+  }
+
+  addKeyPressListeners() {
+    this.props.addKeypressListener('left', () => {
+      if (this.state.selectedNonCompleteMatchIndex <= 0) {
+        return;
+      }
+
+      this.setState(prevState => ({
+        selectedNonCompleteMatchIndex:
+          prevState.selectedNonCompleteMatchIndex - 1,
+      }));
+    });
+
+    this.props.addKeypressListener('right', () => {
+      const navMatchesCount = getCurrentAndLastMatches(this.state.matches)
+        .length;
+      if (this.state.selectedNonCompleteMatchIndex >= navMatchesCount - 1) {
+        return;
+      }
+
+      this.setState(prevState => ({
+        selectedNonCompleteMatchIndex:
+          prevState.selectedNonCompleteMatchIndex + 1,
+      }));
+    });
   }
 
   async updateGroups() {
@@ -127,6 +169,7 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
+  addKeypressListener: PropTypes.func.isRequired,
   debug: PropTypes.func.isRequired,
 };
 

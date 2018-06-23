@@ -11,6 +11,13 @@ const screen = blessed.screen({
   debug: true,
   fullUnicode: true,
 });
+
 screen.key(['escape', 'q', 'C-c'], () => process.exit(0));
 
-render(<Dashboard debug={msg => screen.debug(msg)} />, screen);
+render(
+  <Dashboard
+    debug={msg => screen.debug(msg)}
+    addKeypressListener={(key, fn) => screen.key(key, fn)}
+  />,
+  screen,
+);
