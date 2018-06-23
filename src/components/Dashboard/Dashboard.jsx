@@ -8,7 +8,7 @@ import MatchNav from '../MatchNav/MatchNav';
 import ProdAPI from '../../api/prod';
 
 const getAPIWrapper = () => {
-  const shouldUseFixtures = process.env.USE_FIXTURES;
+  const shouldUseFixtures = process.env.USE_FIXTURES === '1';
   if (shouldUseFixtures) {
     return FixtureAPI;
   }
