@@ -27,7 +27,7 @@ function getFormattedCountry(countryName) {
 }
 
 function getFormattedShortCountryName(countryName, fifaCode) {
-  return `${getCountryFlagEmoji(countryName)} ${fifaCode}`;
+  return `${getCountryFlagEmoji(countryName)}  ${fifaCode}`;
 }
 
 function getFormattedScore(match) {
