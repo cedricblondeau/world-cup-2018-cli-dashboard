@@ -30,6 +30,10 @@ function getFormattedShortCountryName(countryName, fifaCode) {
   return `${getCountryFlagEmoji(countryName)} ${fifaCode}`;
 }
 
+function getFormattedScore(match) {
+  return `${match.home_team.goals}-${match.away_team.goals}`;
+}
+
 function getFormattedNonCompletedMatch(match) {
   return `${getFormattedCountry(
     match.home_team.country,
@@ -42,15 +46,28 @@ function getFormattedCompletedMatch(match) {
   } - ${match.away_team.goals} ${getFormattedCountry(match.away_team.country)}`;
 }
 
+function getShortFormattedNonCompletedMatch(match) {
+  return `${match.home_team.code} - ${match.away_team.code}`;
+}
+
+function getShortFormattedCompletedMatch(match) {
+  return `${match.home_team.code} ${getFormattedScore(match)} ${
+    match.away_team.code
+  }`;
+}
+
+function getShortFormattedMatch(match) {
+  if (match.status === 'completed') {
+    return getShortFormattedCompletedMatch(match);
+  }
+  return getShortFormattedNonCompletedMatch(match);
+}
+
 function getFormattedMatch(match) {
   if (match.status === 'completed') {
     return getFormattedCompletedMatch(match);
   }
   return getFormattedNonCompletedMatch(match);
-}
-
-function getFormattedScore(match) {
-  return `${match.home_team.goals}-${match.away_team.goals}`;
 }
 
 function getFormattedDatetime(match) {
@@ -99,4 +116,5 @@ export {
   getFormattedMatch,
   getFormattedMatchEventLeft,
   getFormattedMatchEventRight,
+  getShortFormattedMatch,
 };
