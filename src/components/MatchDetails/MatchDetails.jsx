@@ -21,7 +21,7 @@ const MatchDetails = props => (
         left="66.66%"
       />
     </element>
-    <element width="100%" top={3}>
+    <element width="100%" top={2}>
       <box left={0} width="50%-5" height="100%" align="right">
         <MatchTeamScoreboard
           events={props.match.home_team_events}
