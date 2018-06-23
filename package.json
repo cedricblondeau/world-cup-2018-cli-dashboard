@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "babel-node ./src/index.jsx",
-    "lint": "eslint src/**",
+    "lint": "eslint 'src/**/*.jsx' 'src/**/*.js'",
     "prepublish": "yarn build",
     "build": "babel src --out-dir dist"
   },
