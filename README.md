@@ -38,9 +38,7 @@ wc2018
 
 ## How does it work?
 
-Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/).
-
-Today matches get updated each 5 minutes. Current game score gets updated each 60 seconds.
+Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/). Matches get updated each 30 seconds.
 
 Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
 
@@ -50,8 +48,10 @@ Terminal interface built with [react-blessed](https://github.com/Yomguithereal/r
 git clone https://github.com/cedricblondeau/world-cup-2018-cli-dashboard
 cd world-cup-2018-cli-dashboard
 yarn install
-yarn start
+USE_FIXTURES=1 yarn start
 ```
+
+Set `USE_FIXTURES` to `0` to use the actual API in dev.
 
 Contributions are very welcome.
 
