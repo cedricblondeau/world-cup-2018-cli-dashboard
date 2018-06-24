@@ -18,7 +18,7 @@ const getAPIWrapper = () => {
 const getNextMatches = matches =>
   matches.filter(match => match.status === 'future');
 
-const getCurrentAndLastMatches = matches =>
+const getCurrentOrPastMatches = matches =>
   matches
     .filter(
       match => match.status === 'completed' || match.status === 'in progress',
@@ -29,7 +29,7 @@ class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedNonCompleteMatchIndex: 0,
+      selectedPastOrCompletedMatchIndex: 0,
       groups: null,
       matches: null,
     };
@@ -42,18 +42,14 @@ class Dashboard extends Component {
     this.addKeyPressListeners();
   }
 
-  get matchToDisplay() {
-    return getCurrentAndLastMatches(this.state.matches)[
-      this.state.selectedNonCompleteMatchIndex
-    ];
-  }
-
   get matchDetails() {
     if (!this.state.matches) {
       return <box content="Fetching data..." />;
     }
 
-    const { matchToDisplay } = this;
+    const matchToDisplay = getCurrentOrPastMatches(this.state.matches)[
+      this.state.selectedPastOrCompletedMatchIndex
+    ];
     if (!matchToDisplay) {
       return <box content="No match?" />;
     }
@@ -75,9 +71,9 @@ class Dashboard extends Component {
 
     return (
       <MatchNav
-        currentAndLastMatches={getCurrentAndLastMatches(this.state.matches)}
-        selectedNonCompletedMatchIndex={
-          this.state.selectedNonCompleteMatchIndex
+        currentOrLastMatches={getCurrentOrPastMatches(this.state.matches)}
+        selectedPastOrCompletedMatchIndex={
+          this.state.selectedPastOrCompletedMatchIndex
         }
         nextMatches={getNextMatches(this.state.matches)}
       />
@@ -86,26 +82,26 @@ class Dashboard extends Component {
 
   addKeyPressListeners() {
     this.props.addKeypressListener('left', () => {
-      if (this.state.selectedNonCompleteMatchIndex <= 0) {
+      if (this.state.selectedPastOrCompletedMatchIndex <= 0) {
         return;
       }
 
       this.setState(prevState => ({
-        selectedNonCompleteMatchIndex:
-          prevState.selectedNonCompleteMatchIndex - 1,
+        selectedPastOrCompletedMatchIndex:
+          prevState.selectedPastOrCompletedMatchIndex - 1,
       }));
     });
 
     this.props.addKeypressListener('right', () => {
-      const navMatchesCount = getCurrentAndLastMatches(this.state.matches)
+      const navMatchesCount = getCurrentOrPastMatches(this.state.matches)
         .length;
-      if (this.state.selectedNonCompleteMatchIndex >= navMatchesCount - 1) {
+      if (this.state.selectedPastOrCompletedMatchIndex >= navMatchesCount - 1) {
         return;
       }
 
       this.setState(prevState => ({
-        selectedNonCompleteMatchIndex:
-          prevState.selectedNonCompleteMatchIndex + 1,
+        selectedPastOrCompletedMatchIndex:
+          prevState.selectedPastOrCompletedMatchIndex + 1,
       }));
     });
   }
@@ -140,6 +136,7 @@ class Dashboard extends Component {
 
   render() {
     const matchNavHeight = 5;
+
     return (
       <element>
         <element height={matchNavHeight} top={1}>
