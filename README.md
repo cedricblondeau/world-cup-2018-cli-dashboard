@@ -12,7 +12,7 @@
 docker run -ti -e TZ=America/Toronto -e WITH_EMOJIS=1 cedricbl/world-cup-2018-cli-dashboard
 ```
 
-Replace `America/Toronto` with you actual timezone. Set `WITH_EMOJIS` to `0` to disable emojis.
+Replace `America/Toronto` with your actual timezone. Set `WITH_EMOJIS` to `0` to disable emojis.
 
 **Using `yarn`**:
 
