@@ -1,9 +1,14 @@
 import emoji from 'node-emoji';
 import moment from 'moment';
-
 import { flag } from 'country-emoji';
 
+import config from './config';
+
 function getCountryFlagEmoji(countryName) {
+  if (!config.shouldIncludeEmojis) {
+    return '';
+  }
+
   const countryCodes = new Map([
     ['Korea Republic', 'KR'],
     ['England', 'GB'], // Emoji 5?
@@ -77,6 +82,10 @@ function getFormattedDatetime(match) {
 }
 
 function getEventTypeEmoji(eventType) {
+  if (!config.shouldIncludeEmojis) {
+    return eventType;
+  }
+
   const eventEmojis = new Map([
     ['yellow-card', emoji.get('warning')],
     ['yellow-card-second', emoji.get('warning')],

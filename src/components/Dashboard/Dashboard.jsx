@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import config from '../../config';
 import FixtureAPI from '../../api/fixtures';
 import GroupList from '../GroupList/GroupList';
 import MatchDetails from '../MatchDetails/MatchDetails';
@@ -8,8 +9,7 @@ import MatchNav from '../MatchNav/MatchNav';
 import ProdAPI from '../../api/prod';
 
 const getAPIWrapper = () => {
-  const shouldUseFixtures = process.env.USE_FIXTURES === '1';
-  if (shouldUseFixtures) {
+  if (config.shouldUseFixtures) {
     return FixtureAPI;
   }
   return ProdAPI;

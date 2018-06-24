@@ -26,8 +26,7 @@ const GroupDetails = props => (
     <box
       top={2}
       content={getGroupContent(props.group)}
-      width="100%"
-      align="center"
+      left="center"
       height={4}
     />
   </element>
