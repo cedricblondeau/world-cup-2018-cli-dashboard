@@ -1,4 +1,4 @@
-![screenshot](https://raw.githubusercontent.com/cedricblondeau/world-cup-2018-cli-dashboard/master/screenshot.jpg)
+![screenshot](https://raw.githubusercontent.com/cedricblondeau/world-cup-2018-cli-dashboard/master/screenshot.gif)
 
 # World Cup 2018 CLI Dashboard [![Build Status](https://travis-ci.org/cedricblondeau/world-cup-2018-cli-dashboard.svg?branch=master)](https://travis-ci.org/cedricblondeau/world-cup-2018-cli-dashboard)
 
@@ -48,10 +48,10 @@ Terminal interface built with [react-blessed](https://github.com/Yomguithereal/r
 git clone https://github.com/cedricblondeau/world-cup-2018-cli-dashboard
 cd world-cup-2018-cli-dashboard
 yarn install
-USE_FIXTURES=1 yarn start
+WITH_EMOJIS=1 USE_FIXTURES=1 yarn start
 ```
 
-Set `USE_FIXTURES` to `0` to use the actual API in dev.
+Set `USE_FIXTURES` to `0` to use the actual API in dev and `WITH_EMOJIS` to disable emojis.
 
 Contributions are very welcome.
 
