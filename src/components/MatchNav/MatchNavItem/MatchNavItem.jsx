@@ -14,7 +14,7 @@ const nonSelectedStyle = {
 const MatchNavItem = props => (
   <element left={props.left} top={0} height={2} width={props.width}>
     <box
-      content={getFormattedDatetime(props.match)}
+      content={getFormattedDatetime(props.match, true)}
       top={0}
       align="center"
       width="100%"
