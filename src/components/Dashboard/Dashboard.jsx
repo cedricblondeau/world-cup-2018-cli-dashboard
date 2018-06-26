@@ -38,7 +38,8 @@ class Dashboard extends Component {
   componentDidMount() {
     this.updateGroups();
     this.updateMatches();
-    setInterval(() => this.updateMatches(), 1 * 30 * 1000);
+    setInterval(() => this.updateMatches(), 30 * 1000);
+    setInterval(() => this.updateGroups(), 2 * 60 * 1000);
     this.addKeyPressListeners();
   }
 
