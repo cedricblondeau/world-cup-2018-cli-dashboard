@@ -75,7 +75,11 @@ function getFormattedMatch(match) {
   return getFormattedNonCompletedMatch(match);
 }
 
-function getFormattedDatetime(match) {
+function getFormattedDatetime(match, displayMinuteIfLive = false) {
+  if (displayMinuteIfLive && match.status === 'in progress') {
+    return `LIVE ${match.time}`;
+  }
+
   return moment(match.datetime)
     .local()
     .format('L LT');

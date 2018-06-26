@@ -46,7 +46,7 @@ Use ⬅️  and ➡️  keys to navigate through different different matches.
 
 ## How does it work?
 
-Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/). Matches get updated each 30 seconds.
+Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/). Matches get updated each 30 seconds. Groups get updated each 2 minutes.
 
 Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
 
