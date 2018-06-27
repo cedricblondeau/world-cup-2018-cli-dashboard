@@ -9,8 +9,8 @@ const GroupList = props => {
 
   const groups = props.groups.map((group, i) => (
     <GroupDetails
-      group={group.group}
-      key={`group-details-${group.group.id}`}
+      group={group}
+      key={`group-details-${group.id}`}
       left={i * groupWidth}
       width={groupWidth}
     />

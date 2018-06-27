@@ -4,12 +4,12 @@ import React from 'react';
 import { getFormattedShortCountryName } from '../../../format';
 
 const getGroupContent = group => {
-  const data = group.teams.reduce(
+  const data = group.ordered_teams.reduce(
     (rankings, team) =>
       `${rankings}${getFormattedShortCountryName(
-        team.team.country,
-        team.team.fifa_code,
-      )} ${team.team.points.toString()}\n`,
+        team.country,
+        team.fifa_code,
+      )} ${team.points.toString()}\n`,
     '',
   );
   return data;
