@@ -4,9 +4,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/kinda-sfw.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
-## Install
-
-#### Using `docker` 🐳:
+## Run it in `docker` 🐳 (recommended)
 
 ```bash
 docker pull cedricbl/world-cup-2018-cli-dashboard && \
@@ -15,7 +13,7 @@ docker run -ti -e TZ=America/Toronto -e WITH_EMOJIS=1 cedricbl/world-cup-2018-cl
 
 Replace `America/Toronto` with your actual timezone. Set `WITH_EMOJIS` to `0` to disable emojis.
 
-#### Using `npm` or `yarn`:
+## Install using `npm` or `yarn`
 
 **NPM:**
 ```bash
