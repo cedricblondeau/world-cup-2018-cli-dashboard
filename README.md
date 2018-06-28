@@ -6,26 +6,25 @@
 
 ## Install
 
-**Using `docker` 🐳**:
+#### Using `docker` 🐳:
 
 ```bash
-docker pull cedricbl/world-cup-2018-cli-dashboard && docker run -ti -e TZ=America/Toronto -e WITH_EMOJIS=1 cedricbl/world-cup-2018-cli-dashboard
+docker pull cedricbl/world-cup-2018-cli-dashboard && \
+docker run -ti -e TZ=America/Toronto -e WITH_EMOJIS=1 cedricbl/world-cup-2018-cli-dashboard
 ```
 
 Replace `America/Toronto` with your actual timezone. Set `WITH_EMOJIS` to `0` to disable emojis.
 
-**Using `yarn`**:
+#### Using `npm` or `yarn`:
 
-```bash
-yarn global add world-cup-cli-dashboard
-```
-
-Requires NodeJS 6+.
-
-**Or using `npm`**:
-
+**NPM:**
 ```bash
 npm install -g world-cup-cli-dashboard
+```
+
+**Yarn:**
+```bash
+yarn global add world-cup-cli-dashboard
 ```
 
 Requires NodeJS 6+.
@@ -60,7 +59,7 @@ For now, if you can live without emojis (I cannot), you can use `WITH_EMOJIS=0`.
 
 #### Q: Data is not showing up?
 
-If an API call fail, we log a debug message. Press `F12` to see the debug console, some helpful messages may show up (a 429 HTTP code for instance).
+If an API call fail, we log a debug message. Press `F12` to see the debug console, some helpful messages may show up (a 503 or a 429 HTTP code for instance).
 
 ## Development
 
