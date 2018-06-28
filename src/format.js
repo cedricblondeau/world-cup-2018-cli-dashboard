@@ -85,11 +85,27 @@ function getFormattedDatetime(match, displayMinuteIfLive = false) {
     .format('L LT');
 }
 
-function getEventTypeEmoji(eventType) {
-  if (!config.shouldIncludeEmojis) {
+function getEventTypeFriendlyName(eventType) {
+  const eventFriendlyNames = new Map([
+    ['yellow-card', 'Yellow card'],
+    ['yellow-card-second', '2nd yellow card'],
+    ['red-card', 'Red card'],
+    ['goal', 'Goal'],
+    ['substitution-in', '►'],
+    ['substitution-out', '◄'],
+    ['penalty-kick', 'Penalty kick'],
+    ['goal-penalty', 'Penalty goal'],
+    ['goal-own', 'Own goal'],
+  ]);
+
+  if (!eventFriendlyNames.has(eventType)) {
     return eventType;
   }
 
+  return eventFriendlyNames.get(eventType);
+}
+
+function getEventTypeEmoji(eventType) {
   const eventEmojis = new Map([
     ['yellow-card', emoji.get('warning')],
     ['yellow-card-second', emoji.get('warning')],
@@ -101,6 +117,10 @@ function getEventTypeEmoji(eventType) {
     ['goal-penalty', emoji.get('soccer')],
     ['goal-own', emoji.get('soccer')],
   ]);
+
+  if (!config.shouldIncludeEmojis) {
+    return getEventTypeFriendlyName(eventType);
+  }
 
   if (!eventEmojis.has(eventType)) {
     return eventType;
