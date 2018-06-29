@@ -1,5 +1,4 @@
 import chalk from 'chalk';
-import emoji from 'node-emoji';
 import moment from 'moment';
 import { flag } from 'country-emoji';
 
@@ -106,37 +105,14 @@ function getEventTypeFriendlyName(eventType) {
   return eventFriendlyNames.get(eventType);
 }
 
-function getEventTypeEmoji(eventType) {
-  const eventEmojis = new Map([
-    ['yellow-card', emoji.get('warning')],
-    ['yellow-card-second', emoji.get('warning')],
-    ['red-card', emoji.get('red_circle')],
-    ['goal', emoji.get('soccer')],
-    ['substitution-in', emoji.get('arrow_forward')],
-    ['substitution-out', emoji.get('arrow_backward')],
-    ['penalty-kick', emoji.get('scream')],
-    ['goal-penalty', emoji.get('soccer')],
-    ['goal-own', emoji.get('soccer')],
-  ]);
-
-  if (!config.shouldIncludeEmojis) {
-    return getEventTypeFriendlyName(eventType);
-  }
-
-  if (!eventEmojis.has(eventType)) {
-    return eventType;
-  }
-  return eventEmojis.get(eventType);
-}
-
 function getFormattedMatchEventLeft(event) {
-  return `${getEventTypeEmoji(event.type_of_event)} ${event.time} ${
+  return `${getEventTypeFriendlyName(event.type_of_event)} ${event.time} ${
     event.player
   }`;
 }
 
 function getFormattedMatchEventRight(event) {
-  return `${event.player} ${event.time} ${getEventTypeEmoji(
+  return `${event.player} ${event.time} ${getEventTypeFriendlyName(
     event.type_of_event,
   )}`;
 }
