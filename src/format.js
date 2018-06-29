@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import emoji from 'node-emoji';
 import moment from 'moment';
 import { flag } from 'country-emoji';
@@ -87,15 +88,15 @@ function getFormattedDatetime(match, displayMinuteIfLive = false) {
 
 function getEventTypeFriendlyName(eventType) {
   const eventFriendlyNames = new Map([
-    ['yellow-card', 'Yellow card'],
-    ['yellow-card-second', '2nd yellow card'],
-    ['red-card', 'Red card'],
-    ['goal', 'Goal'],
+    ['yellow-card', chalk.yellow('■')],
+    ['yellow-card-second', chalk.yellow('■')],
+    ['red-card', chalk.red('■')],
+    ['goal', chalk.black.bgWhite('Goal')],
     ['substitution-in', '►'],
     ['substitution-out', '◄'],
-    ['penalty-kick', 'Penalty kick'],
-    ['goal-penalty', 'Penalty goal'],
-    ['goal-own', 'Own goal'],
+    ['penalty-kick', chalk.black.bgWhite('Penalty kick')],
+    ['goal-penalty', chalk.black.bgWhite('Penalty goal')],
+    ['goal-own', chalk.black.bgWhite('Own goal')],
   ]);
 
   if (!eventFriendlyNames.has(eventType)) {
