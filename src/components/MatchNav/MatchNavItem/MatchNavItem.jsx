@@ -5,10 +5,12 @@ import { getShortFormattedMatch, getFormattedDatetime } from '../../../format';
 
 const selectedStyle = {
   bg: 'red',
+  fg: 'white',
 };
 
 const nonSelectedStyle = {
   bg: 'black',
+  fg: 'white',
 };
 
 const MatchNavItem = props => (
