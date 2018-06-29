@@ -1,5 +1,4 @@
 import chalk from 'chalk';
-import emoji from 'node-emoji';
 import moment from 'moment';
 import { flag } from 'country-emoji';
 
