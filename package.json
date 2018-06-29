@@ -35,6 +35,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "blessed": "^0.1.81",
+    "chalk": "^2.4.1",
     "country-emoji": "^1.2.0",
     "moment": "^2.22.2",
     "node-emoji": "^1.8.1",
