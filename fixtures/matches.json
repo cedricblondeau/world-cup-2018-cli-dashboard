@@ -23937,7 +23937,7 @@
     "venue": "Sochi",
     "location": "Fisht Stadium",
     "status": "in progress",
-    "time": "40'",
+    "time": "69'",
     "fifa_id": "300331544",
     "weather": {
       "humidity": "74",
@@ -23946,7 +23946,7 @@
       "wind_speed": "11",
       "description": "Clear Night"
     },
-    "attendance": null,
+    "attendance": "44287",
     "officials": [
       "Cesar RAMOS",
       "Marvin TORRENTERA",
@@ -23967,13 +23967,13 @@
     "home_team": {
       "country": "Uruguay",
       "code": "URU",
-      "goals": 1,
+      "goals": 2,
       "penalties": 0
     },
     "away_team": {
       "country": "Portugal",
       "code": "POR",
-      "goals": 0,
+      "goals": 1,
       "penalties": 0
     },
     "home_team_events": [
@@ -23982,29 +23982,66 @@
         "type_of_event": "goal",
         "player": "Edinson CAVANI",
         "time": "7'"
+      },
+      {
+        "id": 905,
+        "type_of_event": "goal",
+        "player": "Edinson CAVANI",
+        "time": "62'"
+      },
+      {
+        "id": 906,
+        "type_of_event": "substitution-out",
+        "player": "Rodrigo BENTANCUR",
+        "time": "63'"
+      },
+      {
+        "id": 907,
+        "type_of_event": "substitution-in",
+        "player": "Cristian RODRIGUEZ",
+        "time": "63'"
       }
     ],
-    "away_team_events": [],
+    "away_team_events": [
+      {
+        "id": 904,
+        "type_of_event": "goal",
+        "player": "PEPE",
+        "time": "55'"
+      },
+      {
+        "id": 908,
+        "type_of_event": "substitution-out",
+        "player": "ADRIEN SILVA",
+        "time": "65'"
+      },
+      {
+        "id": 909,
+        "type_of_event": "substitution-in",
+        "player": "RICARDO QUARESMA",
+        "time": "65'"
+      }
+    ],
     "home_team_statistics": {
       "country": "Uruguay",
-      "attempts_on_goal": 4,
-      "on_target": 2,
-      "off_target": 1,
+      "attempts_on_goal": 6,
+      "on_target": 3,
+      "off_target": 2,
       "blocked": 1,
       "woodwork": 0,
       "corners": 2,
       "offsides": 0,
-      "ball_possession": 40,
-      "pass_accuracy": 72,
-      "num_passes": 131,
-      "passes_completed": 94,
-      "distance_covered": 42,
-      "balls_recovered": 16,
-      "tackles": 7,
-      "clearances": 6,
+      "ball_possession": 39,
+      "pass_accuracy": 66,
+      "num_passes": 208,
+      "passes_completed": 138,
+      "distance_covered": 74,
+      "balls_recovered": 29,
+      "tackles": 14,
+      "clearances": 16,
       "yellow_cards": 0,
       "red_cards": 0,
-      "fouls_committed": 7,
+      "fouls_committed": 9,
       "tactics": "4-4-2",
       "starting_eleven": [
         {
@@ -24151,24 +24188,24 @@
     },
     "away_team_statistics": {
       "country": "Portugal",
-      "attempts_on_goal": 7,
-      "on_target": 1,
-      "off_target": 2,
-      "blocked": 4,
+      "attempts_on_goal": 12,
+      "on_target": 3,
+      "off_target": 3,
+      "blocked": 6,
       "woodwork": 0,
-      "corners": 1,
+      "corners": 7,
       "offsides": 1,
-      "ball_possession": 59,
-      "pass_accuracy": 83,
-      "num_passes": 238,
-      "passes_completed": 198,
-      "distance_covered": 40,
-      "balls_recovered": 16,
-      "tackles": 5,
-      "clearances": 7,
+      "ball_possession": 61,
+      "pass_accuracy": 81,
+      "num_passes": 415,
+      "passes_completed": 338,
+      "distance_covered": 74,
+      "balls_recovered": 27,
+      "tackles": 7,
+      "clearances": 15,
       "yellow_cards": 0,
       "red_cards": 0,
-      "fouls_committed": 6,
+      "fouls_committed": 11,
       "tactics": "4-4-2",
       "starting_eleven": [
         {
@@ -24313,8 +24350,8 @@
         }
       ]
     },
-    "last_event_update_at": "2018-06-30T18:39:39Z",
-    "last_score_update_at": "2018-06-30T18:40:09Z"
+    "last_event_update_at": "2018-06-30T19:27:38Z",
+    "last_score_update_at": "2018-06-30T19:27:38Z"
   },
   {
     "venue": "Moscow",
