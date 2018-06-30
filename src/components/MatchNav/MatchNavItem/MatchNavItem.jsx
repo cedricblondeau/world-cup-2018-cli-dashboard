@@ -24,6 +24,7 @@ const MatchNavItem = props => (
     />
     <box
       content={getShortFormattedMatch(props.match)}
+      tags
       top={1}
       align="center"
       width="100%"

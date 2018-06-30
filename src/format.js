@@ -55,10 +55,21 @@ function getShortFormattedNonCompletedMatch(match) {
   return `${match.home_team.code} - ${match.away_team.code}`;
 }
 
+function getFormattedTeamCodeForCompletedMatch(teamCode, winnerCode) {
+  if (winnerCode && winnerCode === teamCode) {
+    return `{bold}${teamCode}{/bold}`;
+  }
+  return teamCode;
+}
+
 function getShortFormattedCompletedMatch(match) {
-  return `${match.home_team.code} ${getFormattedScore(match)} ${
-    match.away_team.code
-  }`;
+  return `${getFormattedTeamCodeForCompletedMatch(
+    match.home_team.code,
+    match.winner_code,
+  )} ${getFormattedScore(match)} ${getFormattedTeamCodeForCompletedMatch(
+    match.away_team.code,
+    match.winner_code,
+  )}`;
 }
 
 function getShortFormattedMatch(match) {
