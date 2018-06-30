@@ -1,8 +1,8 @@
 import chalk from 'chalk';
-import moment from 'moment';
 import { flag } from 'country-emoji';
 
 import config from './config';
+import moment from './moment';
 
 function getCountryFlagEmoji(countryName) {
   if (!config.shouldIncludeEmojis) {
@@ -93,7 +93,7 @@ function getFormattedDatetime(match, displayMinuteIfLive = false) {
 
   return moment(match.datetime)
     .local()
-    .format('L LT');
+    .calendar();
 }
 
 function getEventTypeFriendlyName(eventType) {
