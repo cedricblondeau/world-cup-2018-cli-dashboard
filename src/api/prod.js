@@ -2,13 +2,13 @@ import axios from 'axios';
 
 const getGroups = async () => {
   const response = await axios.get(
-    'http://worldcup.sfg.io/teams/group_results',
+    'https://worldcup.sfg.io/teams/group_results',
   );
   return response.data;
 };
 
 const getMatches = async () => {
-  const response = await axios.get('http://worldcup.sfg.io/matches');
+  const response = await axios.get('https://worldcup.sfg.io/matches');
   return response.data;
 };
 
