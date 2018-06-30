@@ -1,14 +1,10 @@
 import axios from 'axios';
+import groupFixtures from '../../fixtures/group_results.json';
 
-const getGroups = async () => {
-  const response = await axios.get(
-    'http://worldcup.sfg.io/teams/group_results',
-  );
-  return response.data;
-};
+const getGroups = async () => groupFixtures;
 
 const getMatches = async () => {
-  const response = await axios.get('http://worldcup.sfg.io/matches');
+  const response = await axios.get('https://worldcup.sfg.io/matches');
   return response.data;
 };
 
