@@ -128,6 +128,24 @@ function getFormattedMatchEventRight(event) {
   )}`;
 }
 
+function getShortStageName(match) {
+  const stageName = match.stage_name;
+  const shortStageNames = new Map([
+    ['First stage', 'Gr.'],
+    ['Round of 16', '1/8'],
+    ['Quarter-finals', '1/4'],
+    ['Semi-finals', '1/2'],
+    ['Play-off for third place', '3rd'],
+    ['Final', '★'],
+  ]);
+
+  if (!shortStageNames.has(stageName)) {
+    return '';
+  }
+
+  return shortStageNames.get(stageName);
+}
+
 export {
   getFormattedCountry,
   getFormattedShortCountryName,
@@ -136,4 +154,5 @@ export {
   getFormattedMatchEventLeft,
   getFormattedMatchEventRight,
   getShortFormattedMatch,
+  getShortStageName,
 };
