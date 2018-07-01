@@ -136,7 +136,7 @@ function getShortStageName(match) {
     ['Quarter-finals', '1/4'],
     ['Semi-finals', '1/2'],
     ['Play-off for third place', '3rd'],
-    ['Final', '★'],
+    ['Final', '★ '],
   ]);
 
   if (!shortStageNames.has(stageName)) {
