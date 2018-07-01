@@ -11,7 +11,7 @@ before_install:
 sudo: false
 
 script:
-  - yarn lint
+  - yarn lint && yarn test
 
 notifications:
   email: false

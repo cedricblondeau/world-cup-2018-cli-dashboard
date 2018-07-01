@@ -1,8 +1,8 @@
 import chalk from 'chalk';
-import moment from 'moment';
 import { flag } from 'country-emoji';
 
 import config from './config';
+import moment from './moment';
 
 function getCountryFlagEmoji(countryName) {
   if (!config.shouldIncludeEmojis) {
@@ -55,10 +55,21 @@ function getShortFormattedNonCompletedMatch(match) {
   return `${match.home_team.code} - ${match.away_team.code}`;
 }
 
+function getFormattedTeamCodeForCompletedMatch(teamCode, winnerCode) {
+  if (winnerCode && winnerCode === teamCode) {
+    return `{bold}${teamCode}{/bold}`;
+  }
+  return teamCode;
+}
+
 function getShortFormattedCompletedMatch(match) {
-  return `${match.home_team.code} ${getFormattedScore(match)} ${
-    match.away_team.code
-  }`;
+  return `${getFormattedTeamCodeForCompletedMatch(
+    match.home_team.code,
+    match.winner_code,
+  )} ${getFormattedScore(match)} ${getFormattedTeamCodeForCompletedMatch(
+    match.away_team.code,
+    match.winner_code,
+  )}`;
 }
 
 function getShortFormattedMatch(match) {
@@ -82,7 +93,7 @@ function getFormattedDatetime(match, displayMinuteIfLive = false) {
 
   return moment(match.datetime)
     .local()
-    .format('L LT');
+    .calendar();
 }
 
 function getEventTypeFriendlyName(eventType) {
@@ -117,6 +128,24 @@ function getFormattedMatchEventRight(event) {
   )}`;
 }
 
+function getShortStageName(match) {
+  const stageName = match.stage_name;
+  const shortStageNames = new Map([
+    ['First stage', 'Gr.'],
+    ['Round of 16', '1/8'],
+    ['Quarter-finals', '1/4'],
+    ['Semi-finals', '1/2'],
+    ['Play-off for third place', '3rd'],
+    ['Final', '★ '],
+  ]);
+
+  if (!shortStageNames.has(stageName)) {
+    return '';
+  }
+
+  return shortStageNames.get(stageName);
+}
+
 export {
   getFormattedCountry,
   getFormattedShortCountryName,
@@ -125,4 +154,5 @@ export {
   getFormattedMatchEventLeft,
   getFormattedMatchEventRight,
   getShortFormattedMatch,
+  getShortStageName,
 };
