@@ -1,7 +1,12 @@
+import chalk from 'chalk';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getShortFormattedMatch, getFormattedDatetime } from '../../../format';
+import {
+  getShortFormattedMatch,
+  getFormattedDatetime,
+  getShortStageName,
+} from '../../../format';
 
 const selectedStyle = {
   bg: 'red',
@@ -23,7 +28,10 @@ const MatchNavItem = props => (
       style={props.isSelected ? selectedStyle : nonSelectedStyle}
     />
     <box
-      content={getShortFormattedMatch(props.match)}
+      content={`${getShortFormattedMatch(props.match)} ${chalk.black.bgWhite(
+        getShortStageName(props.match),
+      )}`}
+      tags
       top={1}
       align="center"
       width="100%"

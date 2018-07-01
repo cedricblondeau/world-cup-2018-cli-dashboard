@@ -15,6 +15,7 @@
     'react/forbid-prop-types': 0
   },
   env: {
-    "node": true
+    "node": true,
+    "jest": true
   }
 }

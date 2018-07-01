@@ -1,6 +1,6 @@
 {
   "name": "world-cup-cli-dashboard",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "main": "dist/index.js",
   "module": "src/index.jsx",
   "bin": {
@@ -16,6 +16,7 @@
   "scripts": {
     "start": "babel-node ./src/index.jsx",
     "lint": "eslint 'src/**/*.jsx' 'src/**/*.js'",
+    "test": "jest",
     "prepublish": "yarn build",
     "build": "babel src --out-dir dist"
   },
@@ -30,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.2.0",
     "prettier": "^1.13.5"
   },
   "dependencies": {
