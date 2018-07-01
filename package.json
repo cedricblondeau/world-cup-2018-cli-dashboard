@@ -49,5 +49,10 @@
     "soccer",
     "football",
     "cli"
-  ]
+  ],
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
+  }
 }
