@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import config from '../../config';
+import EventTracker from '../../EventTracker';
 import FixtureAPI from '../../api/fixtures';
 import GroupList from '../GroupList/GroupList';
 import MatchDetails from '../MatchDetails/MatchDetails';
 import MatchNav from '../MatchNav/MatchNav';
+import Notifier from '../../notifier';
 import ProdAPI from '../../api/prod';
+
+const eventTracker = new EventTracker();
+
+const postNotifications = matches => {
+  const newEvents = eventTracker.findNewEvents(matches);
+  Notifier.notify(newEvents);
+};
 
 const getAPIWrapper = () => {
   if (config.shouldUseFixtures) {
@@ -130,6 +139,8 @@ class Dashboard extends Component {
       }
 
       this.setState({ matches });
+
+      if (config.shouldPostNotifications) postNotifications(matches);
     } catch (e) {
       this.props.debug(`Matches - ${e.message}`);
     }
