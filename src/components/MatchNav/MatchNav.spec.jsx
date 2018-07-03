@@ -48,10 +48,6 @@ describe('<MatchNav>', () => {
     global.process.stdout.columns = actualStdoutColumns;
   });
 
-  it('renders properly', () => {
-    expect(getMatchNavRendered().toJSON()).toMatchSnapshot();
-  });
-
   it('renders the right number of nav items', () => {
     const currentOrLastMatchesCount = 20;
     const nextMatchesCount = 30;
