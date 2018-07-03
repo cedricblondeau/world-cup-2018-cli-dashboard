@@ -3,20 +3,49 @@ import PropTypes from 'prop-types';
 
 import MatchNavItem from './MatchNavItem/MatchNavItem';
 
-const getMatchNavItems = (matches, selectedMatchIndex = null) =>
-  matches.map((match, i) => (
+const matchNavItemWidth = 23;
+
+const getMatchNavItemKey = match => `match-nav-item-${match.fifa_id}`;
+
+const getPaginatedMatchNavItems = (matches, selectedMatchIndex) => {
+  const width = process.stdout.columns;
+  const pageSize = Math.floor(width / matchNavItemWidth);
+
+  const page = Math.floor(selectedMatchIndex / pageSize);
+  const selectedIndex = selectedMatchIndex % pageSize;
+
+  const sliceStart = page * pageSize;
+  const matchesToDisplay = matches.slice(sliceStart, sliceStart + pageSize + 1);
+
+  return matchesToDisplay.map((match, i) => (
     <MatchNavItem
-      isSelected={selectedMatchIndex === i}
-      key={`match-nav-item-{${match.fifa_id}}`}
-      left={i * 23}
-      width={23}
+      isSelected={selectedIndex === i}
+      key={getMatchNavItemKey(match)}
+      left={i * matchNavItemWidth}
+      width={matchNavItemWidth}
       match={match}
     />
   ));
+};
+
+const getMatchNavItems = (matches, selectedMatchIndex = null) => {
+  if (selectedMatchIndex === null) {
+    return matches.map((match, i) => (
+      <MatchNavItem
+        isSelected={false}
+        key={getMatchNavItemKey(match)}
+        left={i * matchNavItemWidth}
+        width={matchNavItemWidth}
+        match={match}
+      />
+    ));
+  }
+  return getPaginatedMatchNavItems(matches, selectedMatchIndex);
+};
 
 const MatchNav = props => (
   <element height={5}>
-    <box top={0} height={2} scrollable>
+    <box top={0} height={2} style={{ bg: 'black' }} scrollable>
       {getMatchNavItems(
         props.currentOrLastMatches,
         props.selectedPastOrCompletedMatchIndex,

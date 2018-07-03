@@ -7,6 +7,11 @@ exports[`<MatchNav> renders properly 1`] = `
   <box
     height={2}
     scrollable={true}
+    style={
+      Object {
+        "bg": "black",
+      }
+    }
     top={0}
   >
     <element
@@ -172,134 +177,6 @@ exports[`<MatchNav> renders properly 1`] = `
     <element
       height={2}
       left={115}
-      top={0}
-      width={23}
-    >
-      <box
-        align="center"
-        content="LIVE full-time"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        top={0}
-        width="100%"
-      />
-      <box
-        align="center"
-        content="FRA - ARG [30m[47m1/8[49m[39m"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        tags={true}
-        top={1}
-        width="100%"
-      />
-    </element>
-    <element
-      height={2}
-      left={138}
-      top={0}
-      width={23}
-    >
-      <box
-        align="center"
-        content="LIVE full-time"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        top={0}
-        width="100%"
-      />
-      <box
-        align="center"
-        content="FRA - ARG [30m[47m1/8[49m[39m"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        tags={true}
-        top={1}
-        width="100%"
-      />
-    </element>
-    <element
-      height={2}
-      left={161}
-      top={0}
-      width={23}
-    >
-      <box
-        align="center"
-        content="LIVE full-time"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        top={0}
-        width="100%"
-      />
-      <box
-        align="center"
-        content="FRA - ARG [30m[47m1/8[49m[39m"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        tags={true}
-        top={1}
-        width="100%"
-      />
-    </element>
-    <element
-      height={2}
-      left={184}
-      top={0}
-      width={23}
-    >
-      <box
-        align="center"
-        content="LIVE full-time"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        top={0}
-        width="100%"
-      />
-      <box
-        align="center"
-        content="FRA - ARG [30m[47m1/8[49m[39m"
-        style={
-          Object {
-            "bg": "black",
-            "fg": "white",
-          }
-        }
-        tags={true}
-        top={1}
-        width="100%"
-      />
-    </element>
-    <element
-      height={2}
-      left={207}
       top={0}
       width={23}
     >
