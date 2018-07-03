@@ -1,0 +1,540 @@
+{
+  "venue": "Kazan",
+  "location": "Kazan Arena",
+  "status": "completed",
+  "time": "full-time",
+  "fifa_id": "300331537",
+  "weather": {
+    "humidity": "33",
+    "temp_celsius": "28",
+    "temp_farenheit": "60",
+    "wind_speed": "12",
+    "description": "Sunny"
+  },
+  "attendance": "42873",
+  "officials": [
+    "Alireza FAGHANI",
+    "Reza SOKHANDAN",
+    "Mohammadreza MANSOURI",
+    "Julio BASCUNAN",
+    "Massimiliano IRRATI",
+    "Carlos ASTROZA",
+    "Pawel GIL",
+    "Paolo VALERI",
+    "Christian SCHIEMANN"
+  ],
+  "stage_name": "Round of 16",
+  "home_team_country": "France",
+  "away_team_country": "Argentina",
+  "datetime": "2018-06-30T14:00:00Z",
+  "winner": "France",
+  "winner_code": "FRA",
+  "home_team": {
+    "country": "France",
+    "code": "FRA",
+    "goals": 4,
+    "penalties": 0
+  },
+  "away_team": {
+    "country": "Argentina",
+    "code": "ARG",
+    "goals": 3,
+    "penalties": 0
+  },
+  "home_team_events": [
+    {
+      "id": 877,
+      "type_of_event": "goal-penalty",
+      "player": "Antoine GRIEZMANN",
+      "time": "13'"
+    },
+    {
+      "id": 885,
+      "type_of_event": "goal",
+      "player": "Benjamin PAVARD",
+      "time": "57'"
+    },
+    {
+      "id": 886,
+      "type_of_event": "goal",
+      "player": "Kylian MBAPPE",
+      "time": "64'"
+    },
+    {
+      "id": 889,
+      "type_of_event": "goal",
+      "player": "Kylian MBAPPE",
+      "time": "68'"
+    },
+    {
+      "id": 891,
+      "type_of_event": "yellow-card",
+      "player": "Blaise MATUIDI",
+      "time": "72'"
+    },
+    {
+      "id": 890,
+      "type_of_event": "yellow-card",
+      "player": "Benjamin PAVARD",
+      "time": "73'"
+    },
+    {
+      "id": 892,
+      "type_of_event": "substitution-out",
+      "player": "Blaise MATUIDI",
+      "time": "75'"
+    },
+    {
+      "id": 893,
+      "type_of_event": "substitution-in",
+      "player": "Corentin TOLISSO",
+      "time": "75'"
+    },
+    {
+      "id": 896,
+      "type_of_event": "substitution-out",
+      "player": "Antoine GRIEZMANN",
+      "time": "83'"
+    },
+    {
+      "id": 897,
+      "type_of_event": "substitution-in",
+      "player": "Nabil FEKIR",
+      "time": "83'"
+    },
+    {
+      "id": 898,
+      "type_of_event": "substitution-out",
+      "player": "Kylian MBAPPE",
+      "time": "89'"
+    },
+    {
+      "id": 899,
+      "type_of_event": "substitution-in",
+      "player": "Florian THAUVIN",
+      "time": "89'"
+    },
+    {
+      "id": 902,
+      "type_of_event": "yellow-card",
+      "player": "Olivier GIROUD",
+      "time": "90'+3'"
+    }
+  ],
+  "away_team_events": [
+    {
+      "id": 876,
+      "type_of_event": "yellow-card",
+      "player": "Marcos ROJO",
+      "time": "11'"
+    },
+    {
+      "id": 878,
+      "type_of_event": "yellow-card",
+      "player": "Nicolas TAGLIAFICO",
+      "time": "19'"
+    },
+    {
+      "id": 879,
+      "type_of_event": "goal",
+      "player": "Angel DI MARIA",
+      "time": "41'"
+    },
+    {
+      "id": 880,
+      "type_of_event": "yellow-card",
+      "player": "Javier MASCHERANO",
+      "time": "43'"
+    },
+    {
+      "id": 881,
+      "type_of_event": "substitution-out",
+      "player": "Marcos ROJO",
+      "time": "46'"
+    },
+    {
+      "id": 882,
+      "type_of_event": "substitution-in",
+      "player": "Federico FAZIO",
+      "time": "46'"
+    },
+    {
+      "id": 883,
+      "type_of_event": "goal",
+      "player": "Gabriel MERCADO",
+      "time": "48'"
+    },
+    {
+      "id": 884,
+      "type_of_event": "yellow-card",
+      "player": "Ever BANEGA",
+      "time": "50'"
+    },
+    {
+      "id": 887,
+      "type_of_event": "substitution-out",
+      "player": "Enzo PEREZ",
+      "time": "66'"
+    },
+    {
+      "id": 888,
+      "type_of_event": "substitution-in",
+      "player": "Sergio AGUERO",
+      "time": "66'"
+    },
+    {
+      "id": 894,
+      "type_of_event": "substitution-out",
+      "player": "Cristian PAVON",
+      "time": "75'"
+    },
+    {
+      "id": 895,
+      "type_of_event": "substitution-in",
+      "player": "Maximiliano MEZA",
+      "time": "75'"
+    },
+    {
+      "id": 900,
+      "type_of_event": "goal",
+      "player": "Sergio AGUERO",
+      "time": "90'+3'"
+    },
+    {
+      "id": 901,
+      "type_of_event": "yellow-card",
+      "player": "Nicolas OTAMENDI",
+      "time": "90'+3'"
+    }
+  ],
+  "home_team_statistics": {
+    "country": "France",
+    "attempts_on_goal": 9,
+    "on_target": 4,
+    "off_target": 4,
+    "blocked": 1,
+    "woodwork": 1,
+    "corners": 0,
+    "offsides": 0,
+    "ball_possession": 41,
+    "pass_accuracy": 84,
+    "num_passes": 352,
+    "passes_completed": 295,
+    "distance_covered": 97,
+    "balls_recovered": 35,
+    "tackles": 12,
+    "clearances": 20,
+    "yellow_cards": 3,
+    "red_cards": 0,
+    "fouls_committed": 21,
+    "tactics": "4-2-3-1",
+    "starting_eleven": [
+      {
+        "name": "Hugo LLORIS",
+        "captain": true,
+        "shirt_number": 1,
+        "position": "Goalie"
+      },
+      {
+        "name": "Benjamin PAVARD",
+        "captain": false,
+        "shirt_number": 2,
+        "position": "Defender"
+      },
+      {
+        "name": "Raphael VARANE",
+        "captain": false,
+        "shirt_number": 4,
+        "position": "Defender"
+      },
+      {
+        "name": "Samuel UMTITI",
+        "captain": false,
+        "shirt_number": 5,
+        "position": "Defender"
+      },
+      {
+        "name": "Paul POGBA",
+        "captain": false,
+        "shirt_number": 6,
+        "position": "Midfield"
+      },
+      {
+        "name": "Antoine GRIEZMANN",
+        "captain": false,
+        "shirt_number": 7,
+        "position": "Forward"
+      },
+      {
+        "name": "Olivier GIROUD",
+        "captain": false,
+        "shirt_number": 9,
+        "position": "Forward"
+      },
+      {
+        "name": "Kylian MBAPPE",
+        "captain": false,
+        "shirt_number": 10,
+        "position": "Forward"
+      },
+      {
+        "name": "Ngolo KANTE",
+        "captain": false,
+        "shirt_number": 13,
+        "position": "Midfield"
+      },
+      {
+        "name": "Blaise MATUIDI",
+        "captain": false,
+        "shirt_number": 14,
+        "position": "Midfield"
+      },
+      {
+        "name": "Lucas HERNANDEZ",
+        "captain": false,
+        "shirt_number": 21,
+        "position": "Defender"
+      }
+    ],
+    "substitutes": [
+      {
+        "name": "Presnel KIMPEMBE",
+        "captain": false,
+        "shirt_number": 3,
+        "position": "Defender"
+      },
+      {
+        "name": "Thomas LEMAR",
+        "captain": false,
+        "shirt_number": 8,
+        "position": "Forward"
+      },
+      {
+        "name": "Ousmane DEMBELE",
+        "captain": false,
+        "shirt_number": 11,
+        "position": "Forward"
+      },
+      {
+        "name": "Corentin TOLISSO",
+        "captain": false,
+        "shirt_number": 12,
+        "position": "Midfield"
+      },
+      {
+        "name": "Steven NZONZI",
+        "captain": false,
+        "shirt_number": 15,
+        "position": "Midfield"
+      },
+      {
+        "name": "Steve MANDANDA",
+        "captain": false,
+        "shirt_number": 16,
+        "position": "Goalie"
+      },
+      {
+        "name": "Adil RAMI",
+        "captain": false,
+        "shirt_number": 17,
+        "position": "Defender"
+      },
+      {
+        "name": "Nabil FEKIR",
+        "captain": false,
+        "shirt_number": 18,
+        "position": "Forward"
+      },
+      {
+        "name": "Djibril SIDIBE",
+        "captain": false,
+        "shirt_number": 19,
+        "position": "Defender"
+      },
+      {
+        "name": "Florian THAUVIN",
+        "captain": false,
+        "shirt_number": 20,
+        "position": "Forward"
+      },
+      {
+        "name": "Benjamin MENDY",
+        "captain": false,
+        "shirt_number": 22,
+        "position": "Defender"
+      },
+      {
+        "name": "Alphonse AREOLA",
+        "captain": false,
+        "shirt_number": 23,
+        "position": "Goalie"
+      }
+    ]
+  },
+  "away_team_statistics": {
+    "country": "Argentina",
+    "attempts_on_goal": 9,
+    "on_target": 4,
+    "off_target": 1,
+    "blocked": 4,
+    "woodwork": 0,
+    "corners": 4,
+    "offsides": 1,
+    "ball_possession": 59,
+    "pass_accuracy": 86,
+    "num_passes": 548,
+    "passes_completed": 473,
+    "distance_covered": 96,
+    "balls_recovered": 28,
+    "tackles": 22,
+    "clearances": 10,
+    "yellow_cards": 5,
+    "red_cards": 0,
+    "fouls_committed": 15,
+    "tactics": "4-3-3",
+    "starting_eleven": [
+      {
+        "name": "Franco ARMANI",
+        "captain": false,
+        "shirt_number": 12,
+        "position": "Goalie"
+      },
+      {
+        "name": "Gabriel MERCADO",
+        "captain": false,
+        "shirt_number": 2,
+        "position": "Defender"
+      },
+      {
+        "name": "Nicolas TAGLIAFICO",
+        "captain": false,
+        "shirt_number": 3,
+        "position": "Defender"
+      },
+      {
+        "name": "Ever BANEGA",
+        "captain": false,
+        "shirt_number": 7,
+        "position": "Midfield"
+      },
+      {
+        "name": "Lionel MESSI",
+        "captain": true,
+        "shirt_number": 10,
+        "position": "Forward"
+      },
+      {
+        "name": "Angel DI MARIA",
+        "captain": false,
+        "shirt_number": 11,
+        "position": "Midfield"
+      },
+      {
+        "name": "Javier MASCHERANO",
+        "captain": false,
+        "shirt_number": 14,
+        "position": "Defender"
+      },
+      {
+        "name": "Enzo PEREZ",
+        "captain": false,
+        "shirt_number": 15,
+        "position": "Midfield"
+      },
+      {
+        "name": "Marcos ROJO",
+        "captain": false,
+        "shirt_number": 16,
+        "position": "Defender"
+      },
+      {
+        "name": "Nicolas OTAMENDI",
+        "captain": false,
+        "shirt_number": 17,
+        "position": "Defender"
+      },
+      {
+        "name": "Cristian PAVON",
+        "captain": false,
+        "shirt_number": 22,
+        "position": "Midfield"
+      }
+    ],
+    "substitutes": [
+      {
+        "name": "Nahuel GUZMAN",
+        "captain": false,
+        "shirt_number": 1,
+        "position": "Goalie"
+      },
+      {
+        "name": "Cristian ANSALDI",
+        "captain": false,
+        "shirt_number": 4,
+        "position": "Defender"
+      },
+      {
+        "name": "Lucas BIGLIA",
+        "captain": false,
+        "shirt_number": 5,
+        "position": "Midfield"
+      },
+      {
+        "name": "Federico FAZIO",
+        "captain": false,
+        "shirt_number": 6,
+        "position": "Defender"
+      },
+      {
+        "name": "Marcos ACUNA",
+        "captain": false,
+        "shirt_number": 8,
+        "position": "Defender"
+      },
+      {
+        "name": "Gonzalo HIGUAIN",
+        "captain": false,
+        "shirt_number": 9,
+        "position": "Forward"
+      },
+      {
+        "name": "Maximiliano MEZA",
+        "captain": false,
+        "shirt_number": 13,
+        "position": "Midfield"
+      },
+      {
+        "name": "Eduardo SALVIO",
+        "captain": false,
+        "shirt_number": 18,
+        "position": "Defender"
+      },
+      {
+        "name": "Sergio AGUERO",
+        "captain": false,
+        "shirt_number": 19,
+        "position": "Forward"
+      },
+      {
+        "name": "Giovani LO CELSO",
+        "captain": false,
+        "shirt_number": 20,
+        "position": "Midfield"
+      },
+      {
+        "name": "Paulo DYBALA",
+        "captain": false,
+        "shirt_number": 21,
+        "position": "Forward"
+      },
+      {
+        "name": "Wilfredo CABALLERO",
+        "captain": false,
+        "shirt_number": 23,
+        "position": "Goalie"
+      }
+    ]
+  },
+  "last_event_update_at": "2018-06-30T17:16:20Z",
+  "last_score_update_at": "2018-06-30T17:16:20Z"
+}
