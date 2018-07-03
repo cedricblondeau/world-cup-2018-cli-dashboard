@@ -4,7 +4,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/kinda-sfw.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
-## Run it in `docker` 🐳 (recommended)
+## Run it in `docker` 🐳
 
 ```bash
 docker pull cedricbl/world-cup-2018-cli-dashboard && \
@@ -30,16 +30,12 @@ Requires NodeJS 6+.
 ## Usage
 
 ```bash
-wc2018
+WITH_EMOJIS=0 POST_NOTIFICATIONS=0 wc2018
 ```
 
-With emojis:
-
-```bash
-WITH_EMOJIS=1 wc2018
-```
-
-Use ⬅️  and ➡️  keys to navigate through different different matches.
+- Use ⬅️  and ➡️  keys to navigate through different different matches.
+- Set `WITH_EMOJIS` to 1 to enable emojis.
+- Set `POST_NOTIFICATIONS` to enable OS notifications when receiving new math events such as goals, cards or substitutions (does not work in Docker).
 
 ## How does it work?
 
