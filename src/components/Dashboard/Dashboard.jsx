@@ -92,6 +92,10 @@ class Dashboard extends Component {
 
   addKeyPressListeners() {
     this.props.addKeypressListener('left', () => {
+      if (!this.state.matches) {
+        return;
+      }
+
       if (this.state.selectedPastOrCompletedMatchIndex <= 0) {
         return;
       }
@@ -103,6 +107,10 @@ class Dashboard extends Component {
     });
 
     this.props.addKeypressListener('right', () => {
+      if (!this.state.matches) {
+        return;
+      }
+
       const navMatchesCount = getCurrentOrPastMatches(this.state.matches)
         .length;
       if (this.state.selectedPastOrCompletedMatchIndex >= navMatchesCount - 1) {
