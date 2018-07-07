@@ -1,5 +1,5 @@
 import EventTracker from '../EventTracker';
-import matchFixtures from '../../fixtures/matches.json';
+import matchFixtures from '../../../fixtures/matches.json';
 
 let eventTracker;
 
