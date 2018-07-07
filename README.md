@@ -6,12 +6,23 @@
 
 ## Run it in `docker` 🐳
 
+**Pull it from Docker Hub:**
+
 ```bash
 docker pull cedricbl/world-cup-2018-cli-dashboard && \
 docker run -ti -e TZ=America/Toronto cedricbl/world-cup-2018-cli-dashboard
 ```
 
-Replace `America/Toronto` with your actual timezone.
+Replace `America/Toronto` with your actual timezone. This image is for `amd64` arch only.
+
+**Or build it:**
+
+Want to build this image from a `Dockerfile` instead or run this dashboard on a non `amd64` arch, let's say `arm` on a Raspberry Pi?
+
+```
+docker build -t world-cup-2018-cli-dashboard github.com/cedricblondeau/world-cup-2018-cli-dashboard && \
+docker run -ti world-cup-2018-cli-dashboard
+```
 
 ## Install using `npm` or `yarn`
 
