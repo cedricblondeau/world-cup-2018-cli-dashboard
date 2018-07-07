@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import GroupDetails from './GroupDetails/GroupDetails';
 
 const GroupList = props => {
-  const groupWidth = 22;
+  const groupWidth = 18;
   const groupCount = 8;
 
   const groups = props.groups.map((group, i) => (
