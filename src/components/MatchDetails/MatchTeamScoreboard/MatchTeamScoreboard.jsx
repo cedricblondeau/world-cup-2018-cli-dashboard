@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { getFormattedCountry } from '../../../format';
+import { getColoredCountryName } from '../../../format/format';
 import MatchEvents from '../MatchEvents/MatchEvents';
 
 class MatchTeamScoreboard extends Component {
@@ -18,7 +18,7 @@ class MatchTeamScoreboard extends Component {
       <element>
         <box height={14}>
           <box
-            content={getFormattedCountry(this.props.country)}
+            content={getColoredCountryName(this.props.country)}
             height={1}
             width="100%"
             align="center"

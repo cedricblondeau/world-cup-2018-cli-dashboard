@@ -1,8 +1,9 @@
 import chalk from 'chalk';
 import { flag } from 'country-emoji';
 
-import config from './config';
-import moment from './moment';
+import colors from './colors.json';
+import config from '../config';
+import moment from '../moment';
 
 function getCountryFlagEmoji(countryName) {
   if (!config.shouldIncludeEmojis) {
@@ -27,8 +28,11 @@ function getCountryFlagEmoji(countryName) {
   return flagEmoji;
 }
 
-function getFormattedCountry(countryName) {
-  return `${getCountryFlagEmoji(countryName)}  ${countryName}`;
+function getColoredCountryName(countryName) {
+  if (Object.prototype.hasOwnProperty.call(colors, countryName)) {
+    return chalk`{${colors[countryName]}.bold ${countryName}}`;
+  }
+  return chalk.white.bold(countryName);
 }
 
 function getFormattedShortCountryName(countryName, fifaCode) {
@@ -37,18 +41,6 @@ function getFormattedShortCountryName(countryName, fifaCode) {
 
 function getFormattedScore(match) {
   return `${match.home_team.goals}-${match.away_team.goals}`;
-}
-
-function getFormattedNonCompletedMatch(match) {
-  return `${getFormattedCountry(
-    match.home_team.country,
-  )} - ${getFormattedCountry(match.away_team.country)}`;
-}
-
-function getFormattedCompletedMatch(match) {
-  return `${getFormattedCountry(match.home_team.country)} ${
-    match.home_team.goals
-  } - ${match.away_team.goals} ${getFormattedCountry(match.away_team.country)}`;
 }
 
 function getShortFormattedNonCompletedMatch(match) {
@@ -77,13 +69,6 @@ function getShortFormattedMatch(match) {
     return getShortFormattedCompletedMatch(match);
   }
   return getShortFormattedNonCompletedMatch(match);
-}
-
-function getFormattedMatch(match) {
-  if (match.status === 'completed') {
-    return getFormattedCompletedMatch(match);
-  }
-  return getFormattedNonCompletedMatch(match);
 }
 
 function getFormattedDatetime(match, displayMinuteIfLive = false) {
@@ -147,10 +132,9 @@ function getShortStageName(match) {
 }
 
 export {
-  getFormattedCountry,
+  getColoredCountryName,
   getFormattedShortCountryName,
   getFormattedDatetime,
-  getFormattedMatch,
   getFormattedMatchEventLeft,
   getFormattedMatchEventRight,
   getShortFormattedMatch,

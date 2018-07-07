@@ -1,4 +1,10 @@
-import { getShortStageName, getFormattedDatetime } from '../format';
+import chalk from 'chalk';
+
+import {
+  getShortStageName,
+  getFormattedDatetime,
+  getColoredCountryName,
+} from './format';
 
 describe('Format match data', () => {
   describe('Stage name', () => {
@@ -18,6 +24,20 @@ describe('Format match data', () => {
       expect(
         getFormattedDatetime({ status: 'in progress', time: '79' }, true),
       ).toEqual('LIVE 79');
+    });
+  });
+
+  describe('Colored country name', () => {
+    it('Returns a colored country name for an existing country', () => {
+      expect(getColoredCountryName('France')).toEqual(
+        chalk.bgWhite.blue.bold('France'),
+      );
+    });
+
+    it('Returns just a bold name for a non existing country', () => {
+      expect(getColoredCountryName('Wonderland')).toEqual(
+        chalk.white.bold('Wonderland'),
+      );
     });
   });
 });

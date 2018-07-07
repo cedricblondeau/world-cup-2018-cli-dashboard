@@ -4,7 +4,7 @@ import React from 'react';
 import {
   getFormattedMatchEventLeft,
   getFormattedMatchEventRight,
-} from '../../../format';
+} from '../../../format/format';
 
 const getEventsContent = (events, align) =>
   events.reduce((content, event) => {
