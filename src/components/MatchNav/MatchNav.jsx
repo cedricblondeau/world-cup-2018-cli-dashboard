@@ -51,7 +51,7 @@ const MatchNav = props => (
         props.selectedPastOrCompletedMatchIndex,
       )}
     </box>
-    <box top={3} height={2} scrollable>
+    <box top={3} height={2} style={{ bg: 'black' }} scrollable>
       {getMatchNavItems(props.nextMatches)}
     </box>
   </element>
