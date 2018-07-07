@@ -30,11 +30,11 @@ Requires NodeJS 6+.
 ## Usage
 
 ```bash
-WITH_EMOJIS=0 POST_NOTIFICATIONS=0 wc2018
+POST_NOTIFICATIONS=0 wc2018
 ```
 
 - Use ⬅️  and ➡️  keys to navigate through different different matches.
-- Set `POST_NOTIFICATIONS` to 1 to enable OS notifications when receiving new match events such as goals, cards or substitutions (won't work in Docker).
+- Set `POST_NOTIFICATIONS` to 1 to enable native notifications when receiving new match events such as goals, cards or substitutions (won't work in Docker).
 
 ## How does it work?
 
