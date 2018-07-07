@@ -4,6 +4,7 @@ import {
   getShortStageName,
   getFormattedDatetime,
   getColoredCountryName,
+  getFormattedShortCountryName,
 } from './format';
 
 describe('Format match data', () => {
@@ -37,6 +38,20 @@ describe('Format match data', () => {
     it('Returns just a bold name for a non existing country', () => {
       expect(getColoredCountryName('Wonderland')).toEqual(
         chalk.white.bold('Wonderland'),
+      );
+    });
+  });
+
+  describe('Formatted short country name', () => {
+    it('Returns a Formatted short country name for an existing country', () => {
+      expect(getFormattedShortCountryName('Brazil', 'BRA')).toEqual(
+        `${chalk.yellow('■')} BRA`,
+      );
+    });
+
+    it('Returns a default value for a non existing country', () => {
+      expect(getFormattedShortCountryName('Wonderland', 'WON')).toEqual(
+        `${chalk.white('■')} WON`,
       );
     });
   });

@@ -15,7 +15,7 @@ function getFormattedShortCountryName(countryName, fifaCode) {
   if (Object.prototype.hasOwnProperty.call(flagColors, countryName)) {
     return chalk`{${flagColors[countryName]} ■} ${fifaCode}`;
   }
-  return fifaCode;
+  return `${chalk.white('■')} ${fifaCode}`;
 }
 
 function getFormattedScore(match) {
