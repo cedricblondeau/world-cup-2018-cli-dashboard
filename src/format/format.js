@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { flag } from 'country-emoji';
 
-import colors from './colors.json';
+import colors from './colors';
 import config from '../config';
 import moment from '../moment';
 
