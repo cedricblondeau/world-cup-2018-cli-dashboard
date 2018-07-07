@@ -21,7 +21,7 @@ export default {
   Belgium: 'bgRed.black',
   Spain: 'bgRed.white',
   Russia: 'bgWhite.red',
-  Croatia: 'bgWhite.red',
+  Croatia: 'bgRed.white',
   'Saudi Arabia': 'bgGreen.black',
   Egypt: 'bgRed.black',
   Morocco: 'bgRed.black',
