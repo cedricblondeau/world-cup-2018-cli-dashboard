@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { getFormattedShortCountryName } from '../../../format';
+import { getFormattedShortCountryName } from '../../../format/format';
 
 const getGroupContent = group => {
   const data = group.ordered_teams.reduce(

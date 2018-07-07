@@ -1,4 +1,4 @@
-import { getShortStageName, getFormattedDatetime } from '../format';
+import { getShortStageName, getFormattedDatetime } from './format';
 
 describe('Format match data', () => {
   describe('Stage name', () => {

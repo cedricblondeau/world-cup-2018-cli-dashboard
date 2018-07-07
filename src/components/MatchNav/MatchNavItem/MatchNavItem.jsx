@@ -6,7 +6,7 @@ import {
   getShortFormattedMatch,
   getFormattedDatetime,
   getShortStageName,
-} from '../../../format';
+} from '../../../format/format';
 
 const selectedStyle = {
   bg: 'red',

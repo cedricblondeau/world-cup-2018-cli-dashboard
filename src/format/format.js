@@ -1,9 +1,9 @@
 import chalk from 'chalk';
 import { flag } from 'country-emoji';
 
-import colors from './format/colors.json';
-import config from './config';
-import moment from './moment';
+import colors from './colors.json';
+import config from '../config';
+import moment from '../moment';
 
 function getCountryFlagEmoji(countryName) {
   if (!config.shouldIncludeEmojis) {

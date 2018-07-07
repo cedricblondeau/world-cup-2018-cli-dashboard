@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { getColoredCountryName } from '../../../format';
+import { getColoredCountryName } from '../../../format/format';
 import MatchEvents from '../MatchEvents/MatchEvents';
 
 class MatchTeamScoreboard extends Component {
