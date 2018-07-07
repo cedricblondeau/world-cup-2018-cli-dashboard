@@ -21,7 +21,7 @@ Want to build this image from a `Dockerfile` instead or run this dashboard on a 
 
 ```
 docker build -t world-cup-2018-cli-dashboard github.com/cedricblondeau/world-cup-2018-cli-dashboard && \
-docker run -ti world-cup-2018-cli-dashboard
+docker run -ti -e TZ=America/Toronto world-cup-2018-cli-dashboard
 ```
 
 ## Install using `npm` or `yarn`
