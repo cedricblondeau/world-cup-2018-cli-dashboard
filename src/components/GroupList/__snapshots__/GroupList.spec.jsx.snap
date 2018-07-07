@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GroupList> Renders properly 1`] = `
+<element
+  height={6}
+  left="center"
+  width={144}
+>
+  <element
+    height={6}
+    left={0}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group A{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[34m■[39m URU 9
+[37m■[39m RUS 6
+[32m■[39m KSA 3
+[30m■[39m EGY 0
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={18}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group B{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[31m■[39m ESP 5
+[32m■[39m POR 5
+[32m■[39m IRN 4
+[31m■[39m MAR 1
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={36}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group C{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[34m■[39m FRA 7
+[31m■[39m DEN 5
+[31m■[39m PER 3
+[33m■[39m AUS 1
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={54}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group D{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[31m■[39m CRO 9
+[34m■[39m ARG 4
+[32m■[39m NGA 3
+[34m■[39m ISL 1
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={72}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group E{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[33m■[39m BRA 7
+[31m■[39m SUI 5
+[31m■[39m SRB 3
+[31m■[39m CRC 1
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={90}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group F{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[33m■[39m SWE 6
+[32m■[39m MEX 6
+[31m■[39m KOR 3
+[32m■[39m GER 3
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={108}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group G{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[31m■[39m BEL 9
+[31m■[39m ENG 6
+[31m■[39m TUN 3
+[34m■[39m PAN 0
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+  <element
+    height={6}
+    left={126}
+    top={0}
+    width={18}
+  >
+    <box
+      align="center"
+      content="{bold}Group H{/bold}"
+      height={1}
+      tags={true}
+    />
+    <box
+      content="[33m■[39m COL 6
+[34m■[39m JPN 4
+[32m■[39m SEN 4
+[31m■[39m POL 3
+"
+      height={4}
+      left="center"
+      top={2}
+    />
+  </element>
+</element>
+`;

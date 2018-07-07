@@ -1,42 +1,21 @@
 import chalk from 'chalk';
-import { flag } from 'country-emoji';
 
-import colors from './colors';
-import config from '../config';
+import countryNameColors from './country-name-colors';
+import flagColors from './flag-colors';
 import moment from '../moment';
 
-function getCountryFlagEmoji(countryName) {
-  if (!config.shouldIncludeEmojis) {
-    return '';
-  }
-
-  const countryCodes = new Map([
-    ['Korea Republic', 'KR'],
-    ['England', 'GB'], // Emoji 5?
-  ]);
-
-  let flagEmoji;
-  if (countryCodes.has(countryName)) {
-    flagEmoji = flag(countryCodes.get(countryName));
-  } else {
-    flagEmoji = flag(countryName);
-  }
-  if (!flagEmoji) {
-    return '🤷';
-  }
-
-  return flagEmoji;
-}
-
 function getColoredCountryName(countryName) {
-  if (Object.prototype.hasOwnProperty.call(colors, countryName)) {
-    return chalk`{${colors[countryName]}.bold ${countryName}}`;
+  if (Object.prototype.hasOwnProperty.call(countryNameColors, countryName)) {
+    return chalk`{${countryNameColors[countryName]}.bold ${countryName}}`;
   }
   return chalk.white.bold(countryName);
 }
 
 function getFormattedShortCountryName(countryName, fifaCode) {
-  return `${getCountryFlagEmoji(countryName)}  ${fifaCode}`;
+  if (Object.prototype.hasOwnProperty.call(flagColors, countryName)) {
+    return chalk`{${flagColors[countryName]} ■} ${fifaCode}`;
+  }
+  return `${chalk.white('■')} ${fifaCode}`;
 }
 
 function getFormattedScore(match) {

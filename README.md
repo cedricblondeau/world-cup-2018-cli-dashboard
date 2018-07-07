@@ -8,10 +8,10 @@
 
 ```bash
 docker pull cedricbl/world-cup-2018-cli-dashboard && \
-docker run -ti -e TZ=America/Toronto -e WITH_EMOJIS=0 cedricbl/world-cup-2018-cli-dashboard
+docker run -ti -e TZ=America/Toronto cedricbl/world-cup-2018-cli-dashboard
 ```
 
-Replace `America/Toronto` with your actual timezone. Set `WITH_EMOJIS` to `1` to enable emojis.
+Replace `America/Toronto` with your actual timezone.
 
 ## Install using `npm` or `yarn`
 
@@ -34,7 +34,6 @@ WITH_EMOJIS=0 POST_NOTIFICATIONS=0 wc2018
 ```
 
 - Use ⬅️  and ➡️  keys to navigate through different different matches.
-- Set `WITH_EMOJIS` to 1 to enable emojis.
 - Set `POST_NOTIFICATIONS` to 1 to enable OS notifications when receiving new match events such as goals, cards or substitutions (won't work in Docker).
 
 ## How does it work?
@@ -44,12 +43,6 @@ Data is sourced from the awesome [worldcup.sfg.io](http://worldcup.sfg.io/). Mat
 Terminal interface built with [react-blessed](https://github.com/Yomguithereal/react-blessed).
 
 ## FAQ
-
-#### Q: Emojis are not rendering correctly and/or the layout looks broken, what I can do?
-
-Some terminal configurations may not be able to render flag emojis and emojis can cause alignment issues. This is a known problem.
-
-For now, if you can live without emojis (I cannot), you can use `WITH_EMOJIS=0`.
 
 #### Q: Data is not showing up?
 
@@ -61,10 +54,10 @@ If an API call fail, we log a debug message. Press `F12` to see the debug consol
 git clone https://github.com/cedricblondeau/world-cup-2018-cli-dashboard
 cd world-cup-2018-cli-dashboard
 yarn install
-WITH_EMOJIS=1 USE_FIXTURES=1 yarn start
+USE_FIXTURES=1 yarn start
 ```
 
-Set `USE_FIXTURES` to `0` to use the actual API in dev and `WITH_EMOJIS` to disable emojis.
+Set `USE_FIXTURES` to `0` to use the actual API in dev.
 
 Contributions are very welcome.
 
