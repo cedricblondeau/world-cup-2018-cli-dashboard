@@ -19,7 +19,6 @@ const getTestMatches = (status = 'completed', count = 10) =>
 
 const getMatchNavRendered = (
   currentOrLastMatchesCount = 10,
-  nextMatchesCount = 10,
   selectedPastOrCompletedMatchIndex = 0,
 ) =>
   TestRenderer.create(
@@ -28,7 +27,6 @@ const getMatchNavRendered = (
         'in progress',
         currentOrLastMatchesCount,
       )}
-      nextMatches={getTestMatches('completed', nextMatchesCount)}
       selectedPastOrCompletedMatchIndex={selectedPastOrCompletedMatchIndex}
     />,
   );
@@ -50,16 +48,11 @@ describe('<MatchNav>', () => {
 
   it('renders the right number of nav items', () => {
     const currentOrLastMatchesCount = 20;
-    const nextMatchesCount = 30;
 
-    const matchNavRendered = getMatchNavRendered(
-      currentOrLastMatchesCount,
-      nextMatchesCount,
-    );
+    const matchNavRendered = getMatchNavRendered(currentOrLastMatchesCount);
 
     const expectedVisiblePastOrCurrentNavItems = maxNavItemsOnScreen + 1;
-    const expectedVisibleNavItems =
-      nextMatchesCount + expectedVisiblePastOrCurrentNavItems;
+    const expectedVisibleNavItems = expectedVisiblePastOrCurrentNavItems;
     expect(matchNavRendered.root.findAllByType(MatchNavItem).length).toEqual(
       expectedVisibleNavItems,
     );
@@ -71,7 +64,6 @@ describe('<MatchNav>', () => {
 
     const matchNavRendered = getMatchNavRendered(
       currentOrLastMatchesCount,
-      0,
       selectedPastOrCompletedMatchIndex,
     );
 
@@ -84,7 +76,6 @@ describe('<MatchNav>', () => {
 
     const matchNavRendered = getMatchNavRendered(
       currentOrLastMatchesCount,
-      0,
       selectedPastOrCompletedMatchIndex,
     );
 
@@ -97,7 +88,6 @@ describe('<MatchNav>', () => {
 
     const matchNavRendered = getMatchNavRendered(
       currentOrLastMatchesCount,
-      0,
       selectedPastOrCompletedMatchIndex,
     );
 
@@ -119,7 +109,6 @@ describe('<MatchNav>', () => {
 
     const matchNavRendered = getMatchNavRendered(
       currentOrLastMatchesCount,
-      0,
       selectedPastOrCompletedMatchIndex,
     );
 

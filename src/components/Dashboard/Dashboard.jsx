@@ -24,9 +24,6 @@ const getAPIWrapper = () => {
   return ProdAPI;
 };
 
-const getNextMatches = matches =>
-  matches.filter(match => match.status === 'future');
-
 const getCurrentOrPastMatches = matches =>
   matches
     .filter(
@@ -85,7 +82,6 @@ class Dashboard extends Component {
         selectedPastOrCompletedMatchIndex={
           this.state.selectedPastOrCompletedMatchIndex
         }
-        nextMatches={getNextMatches(this.state.matches)}
       />
     );
   }
@@ -155,7 +151,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    const matchNavHeight = 5;
+    const matchNavHeight = 2;
 
     return (
       <element>
@@ -169,7 +165,7 @@ class Dashboard extends Component {
           type="line"
           width="100%"
         />
-        <element height="100%-15" top={matchNavHeight + 3}>
+        <element height="100%-13" top={matchNavHeight + 3}>
           {this.matchDetails}
         </element>
         <line

@@ -1,6 +1,6 @@
 {
   "name": "world-cup-cli-dashboard",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "dist/index.js",
   "module": "src/index.jsx",
   "bin": {
@@ -36,7 +36,6 @@
     "react-test-renderer": "^16.4.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "blessed": "^0.1.81",
     "chalk": "^2.4.1",
     "moment": "^2.22.2",

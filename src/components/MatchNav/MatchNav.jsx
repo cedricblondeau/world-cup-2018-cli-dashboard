@@ -51,15 +51,11 @@ const MatchNav = props => (
         props.selectedPastOrCompletedMatchIndex,
       )}
     </box>
-    <box top={3} height={2} style={{ bg: 'black' }} scrollable>
-      {getMatchNavItems(props.nextMatches)}
-    </box>
   </element>
 );
 
 MatchNav.propTypes = {
   currentOrLastMatches: PropTypes.array.isRequired,
-  nextMatches: PropTypes.array.isRequired,
   selectedPastOrCompletedMatchIndex: PropTypes.number.isRequired,
 };
 
