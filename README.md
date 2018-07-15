@@ -17,7 +17,7 @@ Replace `America/Toronto` with your actual timezone. This image is for `amd64` a
 
 **Or build it:**
 
-Want to build this image from a `Dockerfile` instead or run this dashboard on a non `amd64` arch, let's say `arm` on a Raspberry Pi?
+Want to build this image from a `Dockerfile` instead? Or do you want to run this dashboard on a non-`amd64` arch, let's say `arm`? On a Raspberry Pi?
 
 ```
 docker build -t world-cup-2018-cli-dashboard github.com/cedricblondeau/world-cup-2018-cli-dashboard && \
