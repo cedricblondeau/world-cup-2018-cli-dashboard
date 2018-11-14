@@ -57,7 +57,7 @@ Terminal interface built with [react-blessed](https://github.com/Yomguithereal/r
 
 #### Q: Data is not showing up?
 
-If an API call fail, we log a debug message. Press `F12` to see the debug console, some helpful messages may show up (a 503 or a 429 HTTP code for instance).
+If an API call fails, we log a debug message. Press `F12` to see the debug console, some helpful messages may show up (a 503 or a 429 HTTP code for instance).
 
 ## Development
 
