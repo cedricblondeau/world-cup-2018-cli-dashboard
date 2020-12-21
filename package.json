@@ -39,7 +39,7 @@
     "blessed": "^0.1.81",
     "chalk": "^2.4.1",
     "moment": "^2.22.2",
-    "node-notifier": "^5.2.1",
+    "node-notifier": "^8.0.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-blessed": "^0.2.1"
