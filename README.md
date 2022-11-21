@@ -1,6 +1,16 @@
-![screenshot](https://raw.githubusercontent.com/cedricblondeau/world-cup-2018-cli-dashboard/master/screenshot.gif)
+<p align="center">
+  <strong>Check out the 2022 dashboard: <a href="https://github.com/cedricblondeau/world-cup-2022-cli-dashboard">cedricblondeau/world-cup-2022-cli-dashboard</a>.</strong>
+</p>
+
+<p align="center">
+⚽🏆
+</p>
+
+<hr />
 
 # World Cup 2018 CLI Dashboard [![Build Status](https://travis-ci.org/cedricblondeau/world-cup-2018-cli-dashboard.svg?branch=master)](https://travis-ci.org/cedricblondeau/world-cup-2018-cli-dashboard)
+
+![screenshot](https://raw.githubusercontent.com/cedricblondeau/world-cup-2018-cli-dashboard/master/screenshot.gif)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/kinda-sfw.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
